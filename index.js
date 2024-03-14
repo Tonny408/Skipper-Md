@@ -165,7 +165,7 @@ setTimeout(() => {
             
             var dev = [FranceKing, FranceKing1,FranceKing2,FranceKing3].map((t) => t.replace(/[^0-9]/g) + "@s.whatsapp.net").includes(auteurMessage);
             function repondre(mes) { zk.sendMessage(origineMessage, { text: mes }, { quoted: ms }); }
-            console.log("\t [][]...{FLASH-MD}...[][]");
+            console.log("\t [][]...{Skipper-Md}...[][]");
             console.log("=========== New message ===========");
             if (verifGroupe) {
                 console.log("message from the group : " + nomGroupe);
@@ -428,7 +428,7 @@ function mybotpic() {
                                    // txt += `message supprimé \n @${auteurMessage.split("@")[0]} rétiré du groupe.`;
                                     const gifLink = "https://raw.githubusercontent.com/djalega8000/Zokou-MD/main/media/remover.gif";
                                     var sticker = new Sticker(gifLink, {
-                                        pack: 'Flash-Md',
+                                        pack: 'Skipper-Md',
                                         author: conf.OWNER_NAME,
                                         type: StickerTypes.FULL,
                                         categories: ['🤩', '🎉'],
@@ -526,7 +526,7 @@ function mybotpic() {
            // txt += `message supprimé \n @${auteurMessage.split("@")[0]} rétiré du groupe.`;
             const gifLink = "https://raw.githubusercontent.com/djalega8000/Zokou-MD/main/media/remover.gif";
             var sticker = new Sticker(gifLink, {
-                pack: 'Flash-Md',
+                pack: 'Skipper-Md',
                 author: conf.OWNER_NAME,
                 type: StickerTypes.FULL,
                 categories: ['🤩', '🎉'],
@@ -688,7 +688,7 @@ zk.ev.on('group-participants.update', async (group) => {
 
 ${metadata.desc}
 
-📌Powred by *France King®🐐*`;
+📌Powred by *Tonny 408®🐐*`;
 
             zk.sendMessage(group.id, { image: { url: ppgroup }, caption: msg, mentions: membres });
         } else if (group.action == 'remove' && (await recupevents(group.id, "goodbye") == 'on')) {
@@ -858,10 +858,10 @@ ${metadata.desc}
                 
                 if((conf.DP).toLowerCase() === 'yes') {     
                 let cmsg = `
-*『𝐅𝐋𝐀𝐒𝐇-𝐌𝐃 is CONNECTED』*
+*『𝐒𝐊𝐈𝐏𝐏𝐄𝐑-𝐌𝐃 is CONNECTED』*
 
      
-║❒Creator: *France King*
+║❒Creator: *Tonny 408*
 ║❒Prefix : [ ${prefixe} ]
 ║❒Mode :${md}
 ║❒Created on : *22.2.2024*
@@ -870,17 +870,17 @@ ${metadata.desc}
      ▞▚▞▚▞▚▞▚▞▚▞▚▞▚▞▚▞▚▞▚▞▚▞▚▞▚
      ▞▚▞▚▞▚▞▚▞▚▞▚▞▚▞▚▞▚▞▚▞▚▞▚▞▚
  
-║❒ _Join *FLASH-MD* Channel for Updates_
-https://whatsapp.com/channel/0029VaTbb3p84Om9LRX1jg0P
+║❒ _Join *SKIPPER-MD* Channel for Updates_
+https://chat.whatsapp.com/IMqAwWV0ulOA1yRuXfmBO2
 
 ║❒ *JOIN OUR WhatsApp Gʀᴏᴜᴘ*
-https://chat.whatsapp.com/CtBGmUkwXiA6kGYAyU5MaX
+https://chat.whatsapp.com/IMqAwWV0ulOA1yRuXfmBO2
 
 ║❒ *FOLLOW THE DEVELOPER* 🪄 
-https://instagram.com/france.king1 
+https://instagram.com/homabayian 
 
 
-                         *𝐅𝐋𝐀𝐒𝐇-𝐌𝐃*`;
+                         *𝙎𝙆𝙄𝙋𝙋𝙀𝙍-𝐌𝐃*`;
                 await zk.sendMessage(zk.user.id, { text: cmsg });
                 }
             }
