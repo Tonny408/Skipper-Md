@@ -30,6 +30,6 @@ Enjoy the diverse features of the Flash-Md  to enhance your conversations and ma
 
 ## Developer:
 
-- [**France King**](https://instagram.com/france.king1)
-- [**WhatsApp**](https://wa.me/254757835036)
-
+- [**TONNY408**](https://instagram.com/homabayian)
+- [**WhatsApp**](https://wa.me/254798780465)
+- [**KISH𓅃**]
