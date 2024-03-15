@@ -31,7 +31,7 @@ const temps = moment().format('HH:mm:ss');
 const date = moment().format('DD/MM/YYYY');
 
   let infoMsg =  `
-╭────✧𝐅𝐋𝐀𝐒𝐇-𝐌𝐃✧────◆
+╭────✧𝐒𝐊𝐈𝐏𝐏𝐄𝐑-𝐌𝐃✧────◆
 │🌠 *Préfix* : ${s.PREFIXE}
 │🌠 *User* : ${s.OWNER_NAME}
 │🌠 *Mode* : ${mode}
@@ -40,13 +40,13 @@ const date = moment().format('DD/MM/YYYY');
 │🌠 *Time* : ${temps} 
 │🌠 *Ram* : ${format(os.totalmem() - os.freemem())}/${format(os.totalmem())}
 │🌠 *Platform* : ${os.platform()}
-│🌠 *Developer* : 𝐅𝐫𝐚𝐧𝐜𝐞 𝐊𝐢𝐧𝐠 
+│🌠 *Developer* : 𝑻𝒐𝒏𝒏𝒚 408
 │🌠 *Version* : 𝐯7.5.25
-╰─────✧The-GOAT✧─────◆ \n\n`;
+╰─────✧TONNY✧─────◆ \n\n`;
 
   let menuMsg=`  
 
-*FLASH-MD COMMANDS :*
+*SKIPPER-COMMANDS :*
 ◇                             ◇
 `;
 
@@ -64,7 +64,7 @@ const date = moment().format('DD/MM/YYYY');
 ◇            ◇
 *————— ★ —————*
 
-  *📌France King®🐐²0²⁴*                                         
+  *📌Tonny 408®🐐²0²⁴*                                         
 *╰═════════════⊷*
 `;
 
