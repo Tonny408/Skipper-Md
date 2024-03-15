@@ -27,7 +27,7 @@ zokou({ nomCom: "menu", categorie: "General" }, async (dest, zk, commandeOptions
     
     
     
-    Owner : ${s.OWNER_NAME} \n       || Commandes : ${cm.length} \n        || Date : ${date}\n || Heure : ${temps} \n || Mémoire : ${format(os.totalmem()-os.freemem())}/${format(os.totalmem())}\n || Plateforme : ${os.platform()}\n || Developpeur : France King \n\n ╰────────────────`;
+    Owner : ${s.OWNER_NAME} \n       || Commandes : ${cm.length} \n        || Date : ${date}\n || Heure : ${temps} \n || Mémoire : ${format(os.totalmem()-os.freemem())}/${format(os.totalmem())}\n || Plateforme : ${os.platform()}\n || Developpeur : Tonny 408 \n\n ╰────────────────`;
     
     
     
@@ -35,7 +35,7 @@ zokou({ nomCom: "menu", categorie: "General" }, async (dest, zk, commandeOptions
       
     ╚═════ ▓▓ ࿇ ▓▓ ═════╝*/
     /* menuMsg+=`
-   ╔════ ▓▓ ࿇FLASH-MD࿇ ▓▓ ════╗
+   ╔════ ▓▓ ࿇SKIPPER-MD࿇ ▓▓ ════╗
   
    ||     Préfixe : ${s.prefixe}
    ||      Owner : ${s.OWNER_NAME}
@@ -43,11 +43,11 @@ zokou({ nomCom: "menu", categorie: "General" }, async (dest, zk, commandeOptions
    ||      Date : ${date}
    ||      Hour : ${temps}
    ||      Mém: ${format(os.totalmem()-os.freemem())}/${format(os.totalmem())}                   {Plateforme : ${os.platform()}
-   ||  Developer : France King 
+   ||  Developer : Tonny 408
    ||
    ╚════ ▓▓ ࿇ ▓▓ ════╝`;*/
     menuMsg += `
-╔════----*FLASH-MD-----
+╔════----*SKIPPER-MD-----
 ║    Préfixe : ${s.PREFIXE}
 ║    Owner : ${s.OWNER_NAME}    
 ║    Mode : ${mode}
@@ -56,7 +56,8 @@ zokou({ nomCom: "menu", categorie: "General" }, async (dest, zk, commandeOptions
 ║    Hour: ${temps}
 ║    Mém : ${format(os.totalmem() - os.freemem())}/${format(os.totalmem())}
 ║    Platform : ${os.platform()}
-║    Déveloper : France King
+║    Déveloper : Skipper 
+408
 ╚════--------------- \n\n`;
     for (const cat in coms) {
         if (!emoji[cat]) {
