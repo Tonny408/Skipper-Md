@@ -1,5 +1,5 @@
 {
-  "name": "FLASH-MD",
+  "name": "SKIPPER-MD",
   "version": "2.0.0",
   "description": "",
   "main": "index.js",
@@ -12,12 +12,12 @@
   "keywords": [
     "bot",
     "Baileys",
-    "Flash-Md",
+    "Skipper-Md",
     "whatsapp",
     "whatsapp-bot",
-    "franceking1"
+    "Tonny408"
   ],
-  "author": "France King",
+  "author": "Tonny 408",
   "license": "ISC",
   "dependencies": {
     "@adiwajshing/keyed-db": "^0.2.4",
