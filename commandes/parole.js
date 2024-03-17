@@ -18,7 +18,7 @@ zokou({ nomCom: "lyrics",
 
     if (lyrics.error) return repondre("no lyrics found");
 
-    let msg = `---------FLASH-MD-lyrics-finder--------
+    let msg = `---------SKIPPER-MD-lyrics-finder--------
 
 * *Artist :* ${lyrics.artist}
 
