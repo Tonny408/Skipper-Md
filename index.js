@@ -47,7 +47,7 @@ const  {addGroupToBanList,isGroupBanned,removeGroupFromBanList} = require("./bdd
 const {isGroupOnlyAdmin,addGroupToOnlyAdminList,removeGroupFromOnlyAdminList} = require("./bdd/onlyAdmin");
 //const //{loadCmd}=require("/framework/mesfonctions")
 let { reagir } = require(__dirname + "/framework/app");
-var session = conf.session.replace(/FLASH-MD-WA-BOT;;;=>/g,"");
+var session = conf.session.replace(/SKIPPER-MD-WA-BOT;;;=>/g,"");
 const prefixe = conf.PREFIXE;
 
 
@@ -132,8 +132,8 @@ setTimeout(() => {
             var origineMessage = ms.key.remoteJid;
             var idBot = decodeJid(zk.user.id);
             var servBot = idBot.split('@')[0];
-            /* const FranceKing='254757835036';
-             const FranceKing1='254751284190';
+            /* const Tonny408='254757835036';
+             const Tonny4081='254751284190';
              const FranceKing2='254750948696'*/
             /*  var superUser=[servBot,FranceKing,FranceKing1,luffy].map((s)=>s.replace(/[^0-9]/g)+"@s.whatsapp.net").includes(auteurMessage);
               var dev =[FranceKing,FranceKing1,FranceKing2].map((t)=>t.replace(/[^0-9]/g)+"@s.whatsapp.net").includes(auteurMessage);*/
