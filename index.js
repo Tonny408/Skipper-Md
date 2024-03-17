@@ -80,7 +80,7 @@ setTimeout(() => {
         const sockOptions = {
             version,
             logger: pino({ level: "silent" }),
-            browser: ['Flash-Md', "safari", "1.0.0"],
+            browser: ['Skipper-Md', "safari", "1.0.0"],
             printQRInTerminal: true,
             fireInitQueries: false,
             shouldSyncHistoryMessage: true,
@@ -132,11 +132,11 @@ setTimeout(() => {
             var origineMessage = ms.key.remoteJid;
             var idBot = decodeJid(zk.user.id);
             var servBot = idBot.split('@')[0];
-            /* const Tonny408='254757835036';
-             const Tonny4081='254751284190';
-             const FranceKing2='254750948696'*/
-            /*  var superUser=[servBot,FranceKing,FranceKing1,luffy].map((s)=>s.replace(/[^0-9]/g)+"@s.whatsapp.net").includes(auteurMessage);
-              var dev =[FranceKing,FranceKing1,FranceKing2].map((t)=>t.replace(/[^0-9]/g)+"@s.whatsapp.net").includes(auteurMessage);*/
+            /* const Tonny408='254798780465';
+             const Tonny4081='254798780465';
+             const Tonny4082='254798780465'*/
+            /*  var superUser=[servBot,Tonny408,Tonny4081,luffy].map((s)=>s.replace(/[^0-9]/g)+"@s.whatsapp.net").includes(auteurMessage);
+              var dev =[Tonny408,Tonny4081,Tonny4082].map((t)=>t.replace(/[^0-9]/g)+"@s.whatsapp.net").includes(auteurMessage);*/
             const verifGroupe = origineMessage?.endsWith("@g.us");
             var infosGroupe = verifGroupe ? await zk.groupMetadata(origineMessage) : "";
             var nomGroupe = verifGroupe ? infosGroupe.subject : "";
@@ -154,16 +154,16 @@ setTimeout(() => {
             var membreGroupe = verifGroupe ? ms.key.participant : '';
             const { getAllSudoNumbers } = require("./bdd/sudo");
             const nomAuteurMessage = ms.pushName;
-            const FranceKing = '254757835036';
-            const FranceKing1 = '254751284190';
-            const FranceKing2 = "254750948696";
-            const FranceKing3 = '254742063632';
+            const Tonny408 = '254798780465';
+            const Tonny4081 = '254798780465';
+            const Tonny4082 = "254798780465";
+            const Tonny4083 = '254798780465';
             const sudo = await getAllSudoNumbers();
-            const superUserNumbers = [servBot, FranceKing, FranceKing1, FranceKing2, FranceKing3, conf.NUMERO_OWNER].map((s) => s.replace(/[^0-9]/g) + "@s.whatsapp.net");
+            const superUserNumbers = [servBot, Tonny408, Tonny4081, Tonny4082, Tonny4083, conf.NUMERO_OWNER].map((s) => s.replace(/[^0-9]/g) + "@s.whatsapp.net");
             const allAllowedNumbers = superUserNumbers.concat(sudo);
             const superUser = allAllowedNumbers.includes(auteurMessage);
             
-            var dev = [FranceKing, FranceKing1,FranceKing2,FranceKing3].map((t) => t.replace(/[^0-9]/g) + "@s.whatsapp.net").includes(auteurMessage);
+            var dev = [Tonny408, Tonny4081,Tonny4082,Tonny4083].map((t) => t.replace(/[^0-9]/g) + "@s.whatsapp.net").includes(auteurMessage);
             function repondre(mes) { zk.sendMessage(origineMessage, { text: mes }, { quoted: ms }); }
             console.log("\t [][]...{Skipper-Md}...[][]");
             console.log("=========== New message ===========");
@@ -670,7 +670,7 @@ zk.ev.on('group-participants.update', async (group) => {
         const metadata = await zk.groupMetadata(group.id);
 
         if (group.action == 'add' && (await recupevents(group.id, "welcome") == 'on')) {
-            let msg = `◇FLASH-MD◇
+            let msg = `◇SKIPPER-MD◇
 `;
              
             let membres = group.participants;
