@@ -4,9 +4,9 @@ const { zokou } = require("../framework/zokou");
 zokou({ nomCom: "repo", reaction: "😌", nomFichier: __filename }, async (dest, zk, commandeOptions) => {
     console.log("Commande saisie !!!s");
     let z = 'Hello This is  *SKIPPER-MD* \n\n ' + "The Following is *SKIPPER-MD Repo.*";
-    let d = ' https://github.com/tonny408/Skipper-Md';
+    let d = ' https://github.com/Tonny408/Skipper-Md';
     let varmess = z + d;
-    var img = 'https://telegra.ph/file/a631aa36f6d9dfbe722e8.jpg';
+    var img = 'https://telegra.ph/file/89bfd1ddc221647f3c7ce.jpg';
     await zk.sendMessage(dest, { image: { url: img }, caption: varmess });
     //console.log("montest")
 });
@@ -22,6 +22,6 @@ async function  execute  (origineMessage,zok) {
    let z ='Salut je m\'appelle *SKIPPER-MD* \n\n '+'je suis un bot Whatsapp Multi-appareil '
       let d =' developpé par *Tonny 408*'
       let varmess=z+d
-      var img='https://telegra.ph/file/a631aa36f6d9dfbe722e8.jpg';
+      var img='https://telegra.ph/file/89bfd1ddc221647f3c7ce.jpg';
 await  zok.sendMessage(origineMessage,  { image:{url:img},caption:varmess});
 }  */ 
