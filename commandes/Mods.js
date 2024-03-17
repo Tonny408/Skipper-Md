@@ -47,7 +47,7 @@ const sleep =  (ms) =>{
         type = 'not animated sticker'
       }
   
-      let msg = `   Flash-stickers-dl
+      let msg = `   Skipper-stickers-dl
       
   *Name :* ${stickers.data.result.name}
   *Type :* ${type} 
