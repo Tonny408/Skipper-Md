@@ -14,7 +14,7 @@ zokou({ nomCom: 'test',
   },
   async (dest, zk, commandeOptions) => {
     const { ms, arg, repondre } = commandeOptions;
-    return repondre('*FLASH-MD is Alive!!!!!!!*\n ```' + powered by + '``` *France King*```') 
+    return repondre('*SKIPPER-MD is Alive!!!!!!!*\n ```' + powered by + '``` *Tonny 408*```') 
   }
 )
  
