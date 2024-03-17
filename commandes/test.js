@@ -22,6 +22,6 @@ async function  execute  (origineMessage,zok) {
    let z ='Salut je m\'appelle *SKIPPER-MD* \n\n '+'je suis un bot Whatsapp Multi-appareil '
       let d =' developpé par *Tonny 408*'
       let varmess=z+d
-      var img='https://telegra.ph/file/13d63c21c1a665bfd8324.jpg'
+      var img='https://telegra.ph/file/a631aa36f6d9dfbe722e8.jpg';
 await  zok.sendMessage(origineMessage,  { image:{url:img},caption:varmess});
 }  */ 
