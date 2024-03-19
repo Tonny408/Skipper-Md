@@ -14,7 +14,6 @@ const proConfig = {
     rejectUnauthorized: false,
   },
 };
-
 // Créez une pool de connexions Postgr
 const pool = new Pool(proConfig);
 
