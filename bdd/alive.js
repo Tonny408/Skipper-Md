@@ -15,7 +15,7 @@ const proConfig = {
   },
 };
 
-// Créez une pool de connexions PostgreS
+// Créez une pool de connexions Postgr
 const pool = new Pool(proConfig);
 
 // Fonction pour créer la table "alive" avec une colonne "id"
