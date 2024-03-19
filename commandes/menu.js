@@ -10,7 +10,7 @@ zokou({ nomCom: "menu", categorie: "General" }, async (dest, zk, commandeOptions
     let { ms, repondre ,prefixe,nomAuteurMessage,mybotpic} = commandeOptions;
     let { cm } = require(__dirname + "/../framework//zokou");
     var coms = {};
-    var mode = "public";
+    var mode = "private";
     
     if ((s.MODE).toLocaleLowerCase() != "yes") {
         mode = "private";
@@ -51,7 +51,7 @@ const date = moment().format('DD/MM/YYYY');
 `;
 
     for (const cat in coms) {
-        menuMsg += `*╭────☢️* *${cat}* *☢️⊷*`;
+        menuMsg += `*╭────* *${cat}* *⊷*`;
         for (const cmd of coms[cat]) {
             menuMsg += `
  *|☬* ${cmd}`;
