@@ -27,7 +27,7 @@ async function createTablecron() {
       `);
       console.log("La table 'cron' a été créée avec succès.");
     } catch (error) {
-      console.error("Une erreur est survenue lors de la création de la table 'cron':", error);
+      console.error("Une erreur est  survenue lors de la création de la table 'cron':", error);
     } finally {
       client.release();
     }

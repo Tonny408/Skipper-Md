@@ -28,7 +28,7 @@ const creerTableBanUser = async () => {
     `);
     console.log("La table 'banUser' a été créée avec succès.");
   } catch (e) {
-    console.error("Une erreur est survenue lors de la création de la table 'banUser':", e);
+    console.error("Une erreur est  survenue lors de la création de la table 'banUser':", e);
   }
 };
 

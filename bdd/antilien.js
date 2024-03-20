@@ -21,7 +21,7 @@ async function createAntilienTable() {
     await client.query(`
       CREATE TABLE IF NOT EXISTS antilien (
         jid text PRIMARY KEY,
-        etat text,
+        etat  text,
         action text
       );
     `);

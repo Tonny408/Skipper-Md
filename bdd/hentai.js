@@ -26,7 +26,7 @@ const creerTableHentai = async () => {
         groupeJid text PRIMARY KEY
       );
     `);
-    console.log("La table 'hentai' avec 'groupeJid' comme clé primaire a été créée avec succès.");
+    console.log("La table 'hentai' avec 'groupeJid' comme  clé primaire a été créée avec succès.");
   } catch (e) {
     console.error("Une erreur est survenue lors de la création de la table 'hentai':", e);
   }

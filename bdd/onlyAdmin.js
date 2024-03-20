@@ -28,7 +28,7 @@ const creerTableOnlyAdmin = async () => {
     `);
     console.log("La table 'onlyAdmin' a été créée avec succès.");
   } catch (e) {
-    console.error("Une erreur est survenue lors de la création de la table 'onlyAdmin':", e);
+    console.error("Une erreur est survenue  lors de la création de la table 'onlyAdmin':", e);
   }
 };
 

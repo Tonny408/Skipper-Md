@@ -33,7 +33,7 @@ async function createUsersRankTable() {
       );
     `);
   } catch (error) {
-    console.error('Erreur lors de la création de la table users_rank:', error);
+    console.error('Erreur lors de la création de la  table users_rank:', error);
   } finally {
     client.release();
   }

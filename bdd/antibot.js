@@ -111,6 +111,7 @@ async function atbverifierEtatJid(jid) {
   }
 };
 
+
 async function atbrecupererActionJid(jid) {
   const client = await pool.connect();
 

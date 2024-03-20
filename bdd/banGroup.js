@@ -28,7 +28,7 @@ const creerTableBanGroup = async () => {
     `);
     console.log("La table 'banGroup' a été créée avec succès.");
   } catch (e) {
-    console.error("Une erreur est survenue lors de la création de la table 'banGroup':", e);
+    console.error("Une erreur est  survenue lors de la création de la table 'banGroup':", e);
   }
 };
 

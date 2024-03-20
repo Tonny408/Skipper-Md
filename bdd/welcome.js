@@ -33,7 +33,7 @@ const creerTableevents = async () => {
     `);
     console.log("La table 'events' a été créée avec succès.");
   } catch (e) {
-    console.error("Une erreur est survenue lors de la création de la table 'events':", e);
+    console.error("Une erreur est survenue  lors de la création de la table 'events':", e);
   }
 };
 

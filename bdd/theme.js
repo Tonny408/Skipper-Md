@@ -41,7 +41,7 @@ async function createThemeTable() {
 
     console.log('La table "theme" a été créée avec succès.');
   } catch (error) {
-    console.error("Une erreur est survenue lors de la création de la table 'theme':", error);
+    console.error("Une erreur est survenue  lors de la création de la table 'theme':", error);
   } finally {
     client.release();
   }

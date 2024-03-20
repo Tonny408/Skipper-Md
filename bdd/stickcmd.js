@@ -26,7 +26,7 @@ async function creerTableStickcmd() {
         id text NOT NULL
       );
     `);
-    console.log("La table 'stickcmd' a été créée avec succès.");
+    console.log("La table 'stickcmd' a été  créée avec succès.");
   } catch (e) {
     console.error("Une erreur est survenue lors de la création de la table 'stickcmd':", e);
   }
