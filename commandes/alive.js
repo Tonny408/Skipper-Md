@@ -43,7 +43,7 @@ const date = moment().format('DD/MM/YYYY');
  ${message}
  
  
- *SKIPPER-MD by Tonny 408 is alive*`
+ *SKIPPER-MD by Skipper 408 is alive*`
 
  if (lien.match(/\.(mp4|gif)$/i)) {
     try {
