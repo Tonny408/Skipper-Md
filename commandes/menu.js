@@ -16,7 +16,6 @@ zokou({ nomCom: "menu", categorie: "General" }, async (dest, zk, commandeOptions
         mode = "private";
     }
 
-
     
  cm.map(async (com, index) => {
         if (!coms[com.categorie])
