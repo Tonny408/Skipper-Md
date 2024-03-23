@@ -43,7 +43,7 @@ const date = moment().format('DD/MM/YYYY');
  ${message}
  
  
- *SKIPPER-MD by Skipper 408 is alive*`
+ *SKIPPER-MD by Tonny 408 is alive*`
 
  if (lien.match(/\.(mp4|gif)$/i)) {
     try {
@@ -71,7 +71,7 @@ else {
 }
 
     } else {
-        if(!superUser) { repondre("there is no alive for this bot") ; return};
+        if(!superUser) { repondre("👋𝐒𝐊𝐈𝐏𝐏𝐄𝐑-𝐌𝐃 𝚒𝚜 𝚊𝚕𝚠𝚊𝚢𝚜 𝚊𝚌𝚝𝚒𝚟𝚎") ; return};
 
       await   repondre("You have not yet saved your alive, to do this;  enter after alive your message and your image or video link in this context: .alive message;lien");
          repondre("don't do fake things :)")
