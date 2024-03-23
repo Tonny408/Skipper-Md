@@ -26,7 +26,7 @@ Contributions to Skipper-Md are welcome! If you have ideas for new features, imp
 
 The SKIPPER-MD is released under the [MIT License](https://opensource.org/licenses/MIT).
 
-Enjoy the diverse features of the Flash-Md  to enhance your conversations and make your WhatsApp experience more interesting!
+Enjoy the diverse features of the Skipper-Md  to enhance your conversations and make your WhatsApp experience more interesting!
 
 ## Developer:
 
