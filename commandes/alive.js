@@ -21,7 +21,7 @@ zokou(
         const {message , lien} = data;
 
 
-        var mode = "public";
+        var mode = "private";
         if ((s.MODE).toLocaleLowerCase() != "yes") {
             mode = "private";
         }
