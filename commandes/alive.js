@@ -74,7 +74,7 @@ else {
         if(!superUser) { repondre("👋𝐒𝐊𝐈𝐏𝐏𝐄𝐑-𝐌𝐃 𝚒𝚜 𝚊𝚕𝚠𝚊𝚢𝚜 𝚊𝚌𝚝𝚒𝚟𝚎") ; return};
 
       await   repondre("You have not yet saved your alive, to do this;  enter after alive your message and your image or video link in this context: .alive message;lien");
-         repondre("don't do fake things :)")
+         repondre("👋𝐒𝐊𝐈𝐏𝐏𝐄𝐑-𝐌𝐃 𝚒𝚜 𝚊𝚕𝚠𝚊𝚢𝚜 𝚊𝚌𝚝𝚒𝚟𝚎 :)")
      }
  } else {
 
