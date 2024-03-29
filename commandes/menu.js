@@ -21,6 +21,7 @@ zokou({ nomCom: "menu", categorie: "General" }, async (dest, zk, commandeOptions
         coms[com.categorie].push(com.nomCom);
     });
 
+
     moment.tz.setDefault('Africa/Nairobi');
 
 // Create a date and time in EAT
