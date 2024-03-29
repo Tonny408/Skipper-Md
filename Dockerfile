@@ -9,8 +9,8 @@ RUN apt-get update && \
   npm i pm2 -g && \
   rm -rf /var/lib/apt/lists/*
   
-RUN git clone https://github.com/Tonny408/Skipper-Md.git /root/Skipper-Md
-WORKDIR /root/Skipper-Md/
+RUN git clone https://github.com/Tonny408/Skipper-Md.git /root/skipper
+WORKDIR /root/skipper/
 
 
 COPY package.json .
