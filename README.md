@@ -30,6 +30,9 @@ Enjoy the diverse features of the Skipper-Md  to enhance your conversations and 
 
 ## Developer:
 
-- [**TONNY408**](https://instagram.com/homabayian)
-- [**WhatsApp**](https://wa.me/254798780465)
-- [**KISH𓅃**]
+- [**TONNY408**](https://wa.me/254798780465)
+- [**INSTA**](https://instagram.com/homabayian)
+- [**KISH𓅃**] 
+
+- [**MGTOPHAZ**](https://wa.me/254705243111)
+

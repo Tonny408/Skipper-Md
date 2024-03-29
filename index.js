@@ -41,7 +41,7 @@ const { Sticker, createSticker, StickerTypes } = require('wa-sticker-formatter')
 //import chalk from 'chalk'
 const { verifierEtatJid , recupererActionJid } = require("./bdd/antilien");
 const { atbverifierEtatJid , atbrecupererActionJid } = require("./bdd/antibot");
-let evt = require(__dirname + "/framework/zokou");
+let evt = require(__dirname + "/framework/skipper");
 const {isUserBanned , addUserToBanList , removeUserFromBanList} = require("./bdd/banUser");
 const  {addGroupToBanList,isGroupBanned,removeGroupFromBanList} = require("./bdd/banGroup");
 const {isGroupOnlyAdmin,addGroupToOnlyAdminList,removeGroupFromOnlyAdminList} = require("./bdd/onlyAdmin");
@@ -204,7 +204,7 @@ setTimeout(() => {
             //  const verifAdmin = verifGroupe ? await mbre.filter(v => v.admin !== null).map(v => v.id) : ''
             let admins = verifGroupe ? groupeAdmin(mbre) : '';
             const verifAdmin = verifGroupe ? admins.includes(auteurMessage) : false;
-            var verifZokouAdmin = verifGroupe ? admins.includes(idBot) : false;
+            var verifskipperAdmin = verifGroupe ? admins.includes(idBot) : false;
             /** ** */
             /** ***** */
             const arg = texte ? texte.trim().split(/ +/).slice(1) : null;
@@ -235,7 +235,7 @@ function mybotpic() {
                 auteurMessage,
                 nomAuteurMessage,
                 idBot,
-                verifZokouAdmin,
+                verifskipperAdmin,
                 prefixe,
                 arg,
                 repondre,
@@ -426,7 +426,7 @@ function mybotpic() {
                                     };
                                     var txt = "link detected, \n";
                                    // txt += `message supprimé \n @${auteurMessage.split("@")[0]} rétiré du groupe.`;
-                                    const gifLink = "https://raw.githubusercontent.com/djalega8000/Zokou-MD/main/media/remover.gif";
+                                    const gifLink = "https://raw.githubusercontent.com/djalega8000/skipper-MD/main/media/remover.gif";
                                     var sticker = new Sticker(gifLink, {
                                         pack: 'Skipper-Md',
                                         author: conf.OWNER_NAME,
@@ -524,7 +524,7 @@ function mybotpic() {
             };
             var txt = "bot detected, \n";
            // txt += `message supprimé \n @${auteurMessage.split("@")[0]} rétiré du groupe.`;
-            const gifLink = "https://raw.githubusercontent.com/djalega8000/Zokou-MD/main/media/remover.gif";
+            const gifLink = "https://raw.githubusercontent.com/djalega8000/skipper-MD/main/media/remover.gif";
             var sticker = new Sticker(gifLink, {
                 pack: 'Skipper-Md',
                 author: conf.OWNER_NAME,
@@ -599,7 +599,7 @@ function mybotpic() {
             //execution des commandes   
             if (verifCom) {
                 //await await zk.readMessages(ms.key);
-                const cd = evt.cm.find((zokou) => zokou.nomCom === (com));
+                const cd = evt.cm.find((skipper) => skipper.nomCom === (com));
                 if (cd) {
                     try {
 
