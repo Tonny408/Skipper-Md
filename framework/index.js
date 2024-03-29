@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.genererNomFichier = exports.stick = exports.format = exports.styletext = exports.zJson = exports.getBuffer = exports.reaction = exports.police = exports.zokou = void 0;
-let { zokou } = require("./zokou");
-exports.zokou = zokou;
+exports.genererNomFichier = exports.stick = exports.format = exports.styletext = exports.zJson = exports.getBuffer = exports.reaction = exports.police = exports.skipper = void 0;
+let { skipper } = require("./skipper");
+exports.skipper = skipper;
 const mesfonctions_1 = require("./mesfonctions");
 Object.defineProperty(exports, "reaction", { enumerable: true, get: function () { return mesfonctions_1.reaction; } });
 Object.defineProperty(exports, "police", { enumerable: true, get: function () { return mesfonctions_1.police; } });
