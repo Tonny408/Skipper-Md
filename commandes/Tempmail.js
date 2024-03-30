@@ -6,7 +6,7 @@ skipper({ nomCom: "tempmail", reaction: "😌", nomFichier: __filename }, async 
     let z = '*SKIPPER-MD* Temporary emails,Powered by *Tonny 408* \n\n ' + "Click the link below to create unlimited TEMPORARY Emails. Powered by *SKIPPER-MD.*";
     let d = ' https://extraclass.ng';
     let varmess = z + d;
-    var img = 'https://telegra.ph/file/f1f2303ff4e39b0a3b6b3.jpg';
+    var img = 'https://telegra.ph/file/a631aa36f6d9dfbe722e8.jpg';
     await zk.sendMessage(dest, { image: { url: img }, caption: varmess });
     //console.log("montest")
 });
