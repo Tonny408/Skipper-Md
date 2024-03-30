@@ -13,11 +13,11 @@ const proConfig = {
 const pool = new Pool(proConfig);
 
 
-// Function to create the table "antibot"
+// Fonction pour créer la table "antibot"
 async function createAntibotTable() {
   const client = await pool.connect();
   try {
-    // Run a SQL query to create the "antibot" table if it doesn't already exist
+    // Exécutez une requête SQL pour créer la table "antibot" si elle n'existe pas déjà
     await client.query(`
       CREATE TABLE IF NOT EXISTS antibot (
         jid text PRIMARY KEY,
@@ -25,7 +25,7 @@ async function createAntibotTable() {
         action text
       );
     `);
-    console.log("The 'antibot' table has been successfully created..");
+    console.log("La table 'antibot' a été créée avec succès.");
   } catch (error) {
     console.error("Une erreur est survenue lors de la création de la table 'antibot':", error);
   } finally {
