@@ -15,7 +15,7 @@ skipper({ nomCom: "owner", categorie: "General", reaction: "💞" }, async (dest
 ------ *other sudos* -----\n`
      
  let sudos = await getAllSudoNumbers()
-
+// IT IS SKIPPER-MD
    for ( const sudo of sudos) {
     if (sudo) { // Vérification plus stricte pour éliminer les valeurs vides ou indéfinies
       sudonumero = sudo.replace(/[^0-9]/g, '');
