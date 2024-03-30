@@ -1,4 +1,4 @@
-const { skipper } = require('../framework/skipper');
+lconst { skipper } = require('../framework/skipper');
 const traduire = require("../framework/traduction") ;
 const { default: axios } = require('axios');
 //const conf = require('../set');
@@ -55,7 +55,7 @@ fetch(`http://api.brainshop.ai/get?bid=177607&key=NwzhALqeO1kubFVD&uid=[uid]&msg
   
       // Regrouper les arguments en une seule chaîne séparée par "-"
       const image = arg.join(' ');
-      const response = await axios.get(`https://vihangayt.me/tools/photoleap?q=${image}`);
+      const response = await axios.get(`https://api.maher-zubair.tech/ai/chatgptv4?q=${image}`);
       
       const data = response.data;
       let caption = '*powered by SKIPPER-MD*';
@@ -83,7 +83,7 @@ fetch(`http://api.brainshop.ai/get?bid=177607&key=NwzhALqeO1kubFVD&uid=[uid]&msg
   
       // Regrouper les arguments en une seule chaîne séparée par "-"
       const question = arg.join(' ');
-      const response = await axios.get(`https://vihangayt.me/tools/photoleap?q=${question}`);
+      const response = await axios.get(`https://api.maher-zubair.tech/ai/chatgptv4?q=${question}`);
       
       const data = response.data;
       if (data) {
