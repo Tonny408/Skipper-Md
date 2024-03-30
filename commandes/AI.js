@@ -1,4 +1,4 @@
-lconst { skipper } = require('../framework/skipper');
+const { skipper } = require('../framework/skipper');
 const traduire = require("../framework/traduction") ;
 const { default: axios } = require('axios');
 //const conf = require('../set');
