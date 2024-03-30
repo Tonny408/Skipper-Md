@@ -204,7 +204,7 @@ setTimeout(() => {
             //  const verifAdmin = verifGroupe ? await mbre.filter(v => v.admin !== null).map(v => v.id) : ''
             let admins = verifGroupe ? groupeAdmin(mbre) : '';
             const verifAdmin = verifGroupe ? admins.includes(auteurMessage) : false;
-            var verifskipperAdmin = verifGroupe ? admins.includes(idBot) : false;
+            var verifSkipperAdmin = verifGroupe ? admins.includes(idBot) : false;
             /** ** */
             /** ***** */
             const arg = texte ? texte.trim().split(/ +/).slice(1) : null;
@@ -235,7 +235,7 @@ function mybotpic() {
                 auteurMessage,
                 nomAuteurMessage,
                 idBot,
-                verifskipperAdmin,
+                verifSkipperAdmin,
                 prefixe,
                 arg,
                 repondre,
@@ -426,7 +426,7 @@ function mybotpic() {
                                     };
                                     var txt = "link detected, \n";
                                    // txt += `message supprimé \n @${auteurMessage.split("@")[0]} rétiré du groupe.`;
-                                    const gifLink = "https://raw.githubusercontent.com/djalega8000/skipper-MD/main/media/remover.gif";
+                                    const gifLink = "https://raw.githubusercontent.com/djalega8000/Skipper-MD/main/media/remover.gif";
                                     var sticker = new Sticker(gifLink, {
                                         pack: 'Skipper-Md',
                                         author: conf.OWNER_NAME,
@@ -524,7 +524,7 @@ function mybotpic() {
             };
             var txt = "bot detected, \n";
            // txt += `message supprimé \n @${auteurMessage.split("@")[0]} rétiré du groupe.`;
-            const gifLink = "https://raw.githubusercontent.com/djalega8000/skipper-MD/main/media/remover.gif";
+            const gifLink = "https://raw.githubusercontent.com/djalega8000/Skipper-MD/main/media/remover.gif";
             var sticker = new Sticker(gifLink, {
                 pack: 'Skipper-Md',
                 author: conf.OWNER_NAME,
