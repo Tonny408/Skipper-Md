@@ -1,6 +1,6 @@
 var tabCmds = [];
 let cm = [];
-functionskipper(obj, fonctions) {
+function skipper(obj, fonctions) {
     let infoComs = obj;
     if (!obj.categorie) {
         infoComs.categorie = "General";
@@ -13,4 +13,4 @@ functionskipper(obj, fonctions) {
     // console.log('chargement...')
     return infoComs;
 }
-module.exports = {skipper, Module:skipper, cm };
+module.exports = { skipper, Module: skipper, cm };
