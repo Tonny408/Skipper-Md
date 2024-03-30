@@ -1,10 +1,10 @@
-const {skipper } = require("../framework/skipper");
+const { skipper } = require("../framework/skipper");
 const canvacord = require("canvacord");
 const {uploadImageToImgur} = require("../framework/imgur")
 
 // Generic function to create a canvacord order
 function createCanvacordCommand(commandName, canvacordFunction) {
- skipper({
+  skipper({
     nomCom: commandName,
     categorie: "Image-Edit",
     reaction: "🎉"

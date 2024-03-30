@@ -1,4 +1,4 @@
-const {skipper } = require('../framework/skipper');
+const { skipper } = require('../framework/skipper');
 
 // Set a riddle list with questions and answers
 const devinettes = [

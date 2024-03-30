@@ -1,9 +1,9 @@
 const axios = require("axios");
-const {zokou} = require("../framework/zokou");
+const {skipper} = require("../framework/skipper");
 const traduire = require("../framework/traduction");
 const {Sticker ,StickerTypes}= require('wa-sticker-formatter');
 
-zokou({
+skipper({
   nomCom: "ranime",
   categorie: "Fun",
   reaction: "📺"
@@ -35,7 +35,7 @@ async (origineMessage, zk, commandeOptions) => {
   }
 });
 
-zokou({
+skipper({
   nomCom: "google",
   categorie: "Search"
 }, async (dest, zk, commandeOptions) => {
@@ -64,7 +64,7 @@ zokou({
   }
 });
 
-zokou({
+skipper({
   nomCom: "imdb",
   categorie: "Search"
 }, async (dest, zk, commandeOptions) => {
@@ -115,7 +115,7 @@ zokou({
 });
 
 
-zokou({
+skipper({
   nomCom: "emomix",
   categorie: "Conversion"
 }, async (dest, zk, commandeOptions) => {

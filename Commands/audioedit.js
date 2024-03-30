@@ -131,7 +131,7 @@ skipper(
     }
   );
   
- skipper(
+  skipper(
     {
       nomCom: 'slow',
       categorie: 'Audio-Edit',
@@ -205,7 +205,7 @@ skipper(
   );
   
   // Cas pour l'effet "tempo"
- skipper(
+  skipper(
     {
       nomCom: 'tempo',
       categorie: 'Audio-Edit',
@@ -242,7 +242,7 @@ skipper(
   );
   
   // Cas pour l'effet "nightcore"
- skipper(
+  skipper(
     {
       nomCom: 'nightcore',
       categorie: 'Audio-Edit',

@@ -31,7 +31,7 @@ skipper({ nomCom: "tagall", categorie: 'Group', reaction: "📣" }, async (dest,
   let membresGroupe = verifGroupe ? await infosGroupe.participants : ""
   var tag = ""; 
   tag += `========================\n  
-        🌟 *FLASH-MD* 🌟
+        🌟 *SKIPPER-MD* 🌟
 ========================\n
 👥 Group : ${nomGroupe} 🚀 
 👤 Author : *${nomAuteurMessage}* 👋 
@@ -248,9 +248,9 @@ skipper({ nomCom: "remove", categorie: 'Group', reaction: "👨🏿‍💼" }, a
         if (zkad) {
           if (membre) {
             if (admin == false) {
-              const gifLink = "https://raw.githubusercontent.com/djalega8000/skipper-MD/main/media/remover.gif"
+              const gifLink = "https://raw.githubusercontent.com/djalega8000/Skipper-MD/main/media/remover.gif"
               var sticker = new Sticker(gifLink, {
-                pack: 'FLASH-MD', // The pack name
+                pack: 'SKIPPER-MD', // The pack name
                 author: nomAuteurMessage, // The author name
                 type: StickerTypes.FULL, // The sticker type
                 categories: ['🤩', '🎉'], // The sticker category
@@ -698,7 +698,7 @@ skipper({nomCom:"hidetag",categorie:'Group',reaction:"🎤"},async(dest,zk,comma
         let media  = await zk.downloadAndSaveMediaMessage(msgRepondu.stickerMessage)
 
         let stickerMess = new Sticker(media, {
-          pack: 'FLASH-MD-tag',
+          pack: 'SKIPPER-MD-tag',
           type: StickerTypes.CROPPED,
           categories: ["🤩", "🎉"],
           id: "12345",
@@ -764,7 +764,7 @@ skipper({ nomCom: "apk", reaction: "✨", categorie: "Recherche" }, async (dest,
 
     const downloadLink = appData.dllink;
     const captionText =
-      "『 *FLASH-MD App* 』\n\n*Name :* " + appData.name +
+      "『 *SKIPPER-MD App* 』\n\n*Name :* " + appData.name +
       "\n*Id :* " + appData["package"] +
       "\n*Last Update :* " + appData.lastup +
       "\n*Size :* " + appData.size +
@@ -963,11 +963,11 @@ skipper({
   categorie : 'Group'
 } , async (dest,zk,commandeOptions) => {
 
-  const {arg , repondre , verifAdmin , superUser , verifskipperAdmin } = commandeOptions ;
+  const {arg , repondre , verifAdmin , superUser , verifSkipperAdmin } = commandeOptions ;
 
   if (verifAdmin || superUser) {
 
-    if(!verifskipperAdmin){ repondre('You need administrative rights to perform this command') ; return ;}
+    if(!verifSkipperAdmin){ repondre('You need administrative rights to perform this command') ; return ;}
 
     if (!arg || arg.length == 0) { repondre('Please enter the country code whose members will be removed') ; return ;}
 

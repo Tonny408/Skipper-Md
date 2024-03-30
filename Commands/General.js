@@ -1,4 +1,4 @@
-const {skipper } = require("../framework/skipper");
+const { skipper } = require("../framework/skipper");
 const {getAllSudoNumbers,isSudoTableNotEmpty} = require("../bdd/sudo")
 const conf = require("../set");
 

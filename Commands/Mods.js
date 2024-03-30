@@ -1,4 +1,4 @@
-const {skipper } = require('../framework/skipper');
+const { skipper } = require('../framework/skipper');
 const axios = require("axios")
 let { Sticker, createSticker, StickerTypes } = require('wa-sticker-formatter');
 const {isUserBanned , addUserToBanList , removeUserFromBanList} = require("../bdd/banUser");
@@ -13,7 +13,7 @@ const sleep =  (ms) =>{
   } ;
 
 
- skipper({ nomCom: "tgs", categorie: "Mods" }, async (dest, zk, commandeOptions) => {
+  skipper({ nomCom: "tgs", categorie: "Mods" }, async (dest, zk, commandeOptions) => {
     const { ms, repondre, arg, nomAuteurMessage, superUser } = commandeOptions;
   
     if (!superUser) {

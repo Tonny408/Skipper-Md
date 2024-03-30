@@ -434,7 +434,7 @@ skipper({nomCom:"purple",categorie:"Logo",reaction:"🧳"},async(dest,zk,command
     try{
       if(!arg||arg=="")
   {
-    repondre(prefixe+"purple Flash");return;}
+    repondre(prefixe+"purple skipper");return;}
       const lien="https://en.ephoto360.com/purple-text-effect-online-100.html"
       var img = await mumaker.ephoto(lien,arg);
       repondre(" processing ...")
@@ -450,7 +450,7 @@ skipper({nomCom:"gold",categorie:"Logo",reaction:"🧚🏿‍♀️"},async(dest
   try{
       if(!arg||arg=="")
       {
-        repondre(prefixe+"gold Flash-MD");return;
+        repondre(prefixe+"gold SKIPPER-MD");return;
       }
 
     var lien="https://en.ephoto360.com/modern-gold-4-213.html";
@@ -506,7 +506,7 @@ skipper({nomCom:"child",categorie:"Logo",reaction:"😇"},async(dest,zk,commande
   try{
       if(!arg||arg=="")
       {
-        repondre(prefixe+"child Flash-MD");return;
+        repondre(prefixe+"child SKIPPER-MD");return;
       }
 
     var lien="https://en.ephoto360.com/write-text-on-wet-glass-online-589.html";
