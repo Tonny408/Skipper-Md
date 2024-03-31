@@ -1,7 +1,7 @@
 const { skipper } = require('../framework/skipper');
 const traduire = require("../framework/traduction") ;
-const { default: axios } = require('axios');
-//const conf = require('../set');
+const axios = require('axios');
+
 
 
 
@@ -11,7 +11,7 @@ skipper({nomCom:"bot",reaction:"📡",categorie:"IA"},async(dest,zk,commandeOpti
   const {repondre,ms,arg}=commandeOptions;
   
     if(!arg || !arg[0])
-    {return repondre("yes I'm listening to you.")}
+    {return repondre("oui je vous ecoute.")}
     //var quest = arg.join(' ');
   try{
     
@@ -24,78 +24,75 @@ fetch(`http://api.brainshop.ai/get?bid=177607&key=NwzhALqeO1kubFVD&uid=[uid]&msg
   const botResponse = data.cnt;
   console.log(botResponse);
 
-  traduire(botResponse, { to: 'en' })
+  traduire(botResponse, { to: 'fr' })
     .then(translatedResponse => {
       repondre(translatedResponse);
     })
     .catch(error => {
-      console.error('Error when translating into French :', error);
-      repondre('Error when translating into French');
+      console.error('Erreur lors de la traduction en français :', error);
+      repondre('Erreur lors de la traduction en français');
     });
 })
 .catch(error => {
-  console.error('Error requesting BrainShop :', error);
-  repondre('Error requesting BrainShop');
+  console.error('Erreur lors de la requête à BrainShop :', error);
+  repondre('Erreur lors de la requête à BrainShop');
 });
 
-  }catch(e){ repondre("oops an error : "+e)}
+  }catch(e){ repondre("oupsaa une erreur : "+e)}
     
   
   });  
-
-
-
-  skipper({ nomCom: "dalle", reaction: "📡", categorie: "IA" }, async (dest, zk, commandeOptions) => {
-    const { repondre, arg, ms } = commandeOptions;
   
-    try {
-      if (!arg || arg.length === 0) {
-        return repondre(`Please enter the necessary information to generate the image.`);
-      }
-  
-      // Regrouper les arguments en une seule chaîne séparée par "-"
-      const image = arg.join(' ');
-      const response = await axios.get(`https://api.maher-zubair.tech/ai/chatgptv4?q=${image}`);
-      
-      const data = response.data;
-      let caption = '*powered by SKIPPER-MD*';
-      
-      if (data.status && data.owner && data.data) {
-        // Utiliser les données retournées par le service
-        const imageUrl = data.data;
-        zk.sendMessage(dest, { image: { url: imageUrl }, caption: caption }, { quoted: ms });
-      } else {
-        repondre("Error during image generation.");
-      }
-    } catch (error) {
-      console.error('Erreur:', error.message || 'Une erreur s\'est produite');
-      repondre("Oops, an error occurred while processing your request");
+
+
+skipper({ nomCom: "dalle", reaction: "📡", categorie: "IA" }, async (dest, zk, commandeOptions) => {
+  const { repondre, arg, ms } = commandeOptions;
+
+  try {
+    if (!arg || arg.length === 0) {
+      return repondre(`Veuillez entrer les informations nécessaires pour générer l'image.`);
     }
-  });
-  
-  skipper({ nomCom: "gpt", reaction: "📡", categorie: "IA" }, async (dest, zk, commandeOptions) => {
-    const { repondre, arg, ms } = commandeOptions;
-  
-    try {
-      if (!arg || arg.length === 0) {
-        return repondre(`Please ask a question.`);
-      }
-  
-      // Regrouper les arguments en une seule chaîne séparée par "-"
-      const question = arg.join(' ');
-      const response = await axios.get(`https://api.maher-zubair.tech/ai/chatgptv4?q=${question}`);
-      
-      const data = response.data;
-      if (data) {
-        repondre(data.data);
-      } else {
-        repondre("Error during response generation.");
-      }
-    } catch (error) {
-      console.error('Erreur:', error.message || 'Une erreur s\'est produite');
-      repondre("Oops, an error occurred while processing your request.");
+
+    // Regrouper les arguments en une seule chaîne séparée par "-"
+    const image = arg.join(' ');
+    const response = await axios.get(`https://vihangayt.me/tools/photoleap?q=${image}`);
+    
+    const data = response.data;
+    let caption = '*Propulsé par SKIPPER-MD*';
+    
+    if (data.status && data.owner && data.data) {
+      // Utiliser les données retournées par le service
+      const imageUrl = data.data;
+      zk.sendMessage(dest, { image: { url: imageUrl }, caption: caption }, { quoted: ms });
+    } else {
+      repondre("Erreur lors de la génération de l'image");
     }
-  });
+  } catch (error) {
+    console.error('Erreur:', error.message || 'Une erreur s\'est produite');
+    repondre("Oups, une erreur est survenue lors du traitement de votre demande.");
+  }
+});
 
+skipper({ nomCom: "gpt", reaction: "📡", categorie: "IA" }, async (dest, zk, commandeOptions) => {
+  const { repondre, arg, ms } = commandeOptions;
 
-  
+  try {
+    if (!arg || arg.length === 0) {
+      return repondre(`Veuillez poser une questions.`);
+    }
+
+    // Regrouper les arguments en une seule chaîne séparée par "-"
+    const question = arg.join(' ');
+    const response = await axios.get(`https://api.maher-zubair.tech/ai/chatgptv4?q=${question}`);
+    
+    const data = response.data;
+    if (data) {
+      repondre(data.data);
+    } else {
+      repondre("Erreur lors de la génération de la reponse");
+    }
+  } catch (error) {
+    console.error('Erreur:', error.message || 'Une erreur s\'est produite');
+    repondre("Oups, une erreur est survenue lors du traitement de votre demande.");
+  }
+});
