@@ -1,4 +1,4 @@
-const { skipper } = require('../framework/skipper');
+const { zokou } = require('../framework/zokou');
 const traduire = require("../framework/traduction") ;
 const axios = require('axios');
 
@@ -6,7 +6,7 @@ const axios = require('axios');
 
 
 
-skipper({nomCom:"bot",reaction:"📡",categorie:"IA"},async(dest,zk,commandeOptions)=>{
+zokou({nomCom:"bot",reaction:"📡",categorie:"IA"},async(dest,zk,commandeOptions)=>{
 
   const {repondre,ms,arg}=commandeOptions;
   
@@ -45,7 +45,7 @@ fetch(`http://api.brainshop.ai/get?bid=177607&key=NwzhALqeO1kubFVD&uid=[uid]&msg
   
 
 
-skipper({ nomCom: "dalle", reaction: "📡", categorie: "IA" }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: "dalle", reaction: "📡", categorie: "IA" }, async (dest, zk, commandeOptions) => {
   const { repondre, arg, ms } = commandeOptions;
 
   try {
@@ -58,7 +58,7 @@ skipper({ nomCom: "dalle", reaction: "📡", categorie: "IA" }, async (dest, zk,
     const response = await axios.get(`https://vihangayt.me/tools/photoleap?q=${image}`);
     
     const data = response.data;
-    let caption = '*Propulsé par SKIPPER-MD*';
+    let caption = '*Propulsé par ZOKOU-MD*';
     
     if (data.status && data.owner && data.data) {
       // Utiliser les données retournées par le service
@@ -73,7 +73,7 @@ skipper({ nomCom: "dalle", reaction: "📡", categorie: "IA" }, async (dest, zk,
   }
 });
 
-skipper({ nomCom: "gpt", reaction: "📡", categorie: "IA" }, async (dest, zk, commandeOptions) => {
+zokou({ nomCom: "gpt", reaction: "📡", categorie: "IA" }, async (dest, zk, commandeOptions) => {
   const { repondre, arg, ms } = commandeOptions;
 
   try {
@@ -83,7 +83,7 @@ skipper({ nomCom: "gpt", reaction: "📡", categorie: "IA" }, async (dest, zk, c
 
     // Regrouper les arguments en une seule chaîne séparée par "-"
     const question = arg.join(' ');
-    const response = await axios.get(`https://api.maher-zubair.tech/ai/chatgptv4?q=${question}`);
+    const response = await axios.get('https://api.maher-zubair.tech/ai/chatgptv4?q=${question}`);
     
     const data = response.data;
     if (data) {
