@@ -1,4 +1,4 @@
-const { skipper } = require('../framework/skipper');
+noconst { skipper } = require('../framework/skipper');
 const {addOrUpdateDataInAlive , getDataFromAlive} = require('../bdd/alive')
 const moment = require("moment-timezone");
 const s = require(__dirname + "/../set");
@@ -75,7 +75,7 @@ else {
 
       await   repondre(:)")
      ;
-         repondre("👋𝐒𝐊𝐈𝐏𝐏𝐄𝐑-𝐌𝐃 𝚒𝚜 𝚊𝚕𝚠𝚊𝚢𝚜 𝚊𝚌𝚝𝚒𝚟𝚎 :")
+         repondre("👋𝐒𝐊𝐈𝐏𝐏𝐄𝐑-𝐌𝐃 𝚒𝚜 𝚊𝚕𝚠𝚊𝚢𝚜 𝚊𝚌𝚝𝚒𝚟𝚎 ")
      }
  } else {
 
