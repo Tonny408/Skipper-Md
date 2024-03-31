@@ -31,15 +31,15 @@ const date = moment().format('DD/MM/YYYY')
   let infoMsg =  `
 ╭────✧𝐒𝐊𝐈𝐏𝐏𝐄𝐑-𝐌𝐃✧═───❖
 │╭─────────────···▸
-││▸ ➊*Préfix* : ${s.PREFIXE}
-││▸ ➋*User* : ${s.OWNER_NAME}
-││▸ ➌*Mode* : ${mode}
-││▸ ➍*Cmds* : ${cm.length} 
-││▸ ➎*Date* : ${date}
-││▸ ➏*Time* : ${temps} 
-││▸ ➐*Ram* : ${format(os.totalmem() - os.freemem())}/${format(os.totalmem())}
-││▸ ➑*Platform* : ${os.platform()}
-││▸ ➒*Developer* : 𝑻𝒐𝒏𝒏𝒚 408
+││▸ ➊Préfix : ${s.PREFIXE}
+││▸ ➋User: ${s.OWNER_NAME}
+││▸ ➌Mode: ${mode}
+││▸ ➍Cmds: ${cm.length} 
+││▸ ➎Date: ${date}
+││▸ ➏Time: ${temps} 
+││▸ ➐Ram: ${format(os.totalmem() - os.freemem())}/${format(os.totalmem())}
+││▸ ➑Platform: ${os.platform()}
+││▸ ➒Developer: 𝐓𝐨𝐧𝐧𝐲 408
 │╰──────────────
 ╰─────✧TONNY✧─────◆ \n\n`;
 
@@ -63,7 +63,7 @@ const date = moment().format('DD/MM/YYYY')
 ◇            ◇
 *————— ★ —————*
 
-  *™Tonny 408®🐐²0²⁴*                                         
+  *™Tonny 408™²0²⁴*                                         
 *╰═════════════⊷*
 `;
 
