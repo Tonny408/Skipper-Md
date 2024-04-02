@@ -35,4 +35,4 @@ Enjoy the diverse features of the Skipper-Md  to enhance your conversations and 
 
 - [**MGTOPHAZ ZENON-AI**](https://wa.me/254705243111)
 
-- [**KISH LEGACY-MD𓅃**]
+- [**KISH KISH-MD𓅃**](https://wa.me/254745936840)
