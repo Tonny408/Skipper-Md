@@ -1,10 +1,4 @@
- <h1 align="center"> SKIPPER-MD </h1>
-<p align="center"> SKIPPER-MD, A Simple WhatsApp user BOT, Created by Tonny 408.
-</p>
-
-
-
-<img src="https://telegra.ph/file/a631aa36f6d9dfbe722e8.jpg" width="700" height="300"/>
+width="700" height="300"/>
 
 
 
