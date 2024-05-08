@@ -1,4 +1,4 @@
-const { bot, getJson, getFloor } = require('../lib/')
+const { bot, getJson, getFloor } = require('../framework/skipper');
 const moment = require('moment')
 bot(
 	{
