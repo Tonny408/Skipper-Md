@@ -12,7 +12,7 @@
 
 **📌DEPLOY ON HEROKU**
    - ***Click [`FORK`](https://github.com/Tonny408/Skipper-Md/fork) and `Star ⭐ Repository` for Courage.***
-   - ***`Get Session` by [`SCANING QR`](https://skipper-md-8f83ed1a189d.herokuapp.com/) Or [`PAIRING CODE`](https://skipper-md-pair-e9a3d52b61ee.herokuapp.com/pair) Then `Go-to Whatapp>Three dots>Linked Devices`***
+   - ***`Get Session` by [`SCANING QR`](https://skipper-md-8f83ed1a189d.herokuapp.com/) Or [`PAIRING CODE`](https://skipper-md-pair-code-4ea42498ed92.herokuapp.com/) Then `Go-to Whatapp>Three dots>Linked Devices`***
    - You will get a session ID in WhatsApp, copy the ID only.
    - **If you don't have an account on [Heroku](https://signup.heroku.com/), [create an account now](https://signup.heroku.com/).**
    - ***Now [DEPLOY](https://dashboard.heroku.com/new?template=https://github.com/Tonny408/Skipper-Md).***
