@@ -56,7 +56,7 @@ _*on downloading...*_\n\n`
       audioStream.pipe(fileStream);
 
       fileStream.on('finish', () => {
-        // Envoi du fichier audio en utilisant l'URL du fichier local
+        // Envoi du fichier audio en utilibsant l'URL du fichier local
       
 
      zk.sendMessage(origineMessage, { audio: { url:"audio.mp3"},mimetype:'audio/mp4' }, { quoted: ms,ptt: false });
