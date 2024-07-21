@@ -3,7 +3,7 @@ const ytdl = require('@distube/ytdl-core');
 const fs = require('fs');
 
 
-/* fonction pour avoir les données d'une recherche*/
+/* fonction pour avoir les données d'une recherrche*/
 
 async function getytlink(key) {
   try {
