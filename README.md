@@ -7,7 +7,6 @@
 <img src="https://telegra.ph/file/a631aa36f6d9dfbe722e8.jpg" width="700" height="300"/>
 
 
-
 ### Setup
 
 **📌DEPLOY ON HEROKU**
