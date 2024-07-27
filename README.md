@@ -28,9 +28,12 @@ The SKIPPER-MD is released under the [MIT License](https://opensource.org/licens
 
 Enjoy the diverse features of the Skipper-Md  to enhance your conversations and make your WhatsApp experience more interesting!
 
-## Developer:
-
+## Dev owner:
 - [**TONNY408**](https://instagram.com/homabayian)
 - [**WhatsApp**](https://wa.me/254798780465)
+
+## ACKNOWLEDGEMENT TO: 
+
+- [**MGTOPHAZ ZENON-AI**](https://wa.me/254705243111)
 - [**KISH𓅃**]
 ￼Enter
