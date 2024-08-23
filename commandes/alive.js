@@ -1,4 +1,4 @@
-const { zokou } = require('../framework/zokou');
+const { skipper } = require('../framework/skipper');
 const {addOrUpdateDataInAlive , getDataFromAlive} = require('../bdd/alive')
 const moment = require("moment-timezone");
 const s = require(__dirname + "/../set");
