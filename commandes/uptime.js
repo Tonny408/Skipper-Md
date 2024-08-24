@@ -1,4 +1,4 @@
-const { zokou } = require("../framework/zokou");
+const { skipper } = require("../framework/skipper");
 const moment = require("moment-timezone");
 const { getBuffer } = require("../framework/dl/Function");
 const { default: axios } = require('axios');
