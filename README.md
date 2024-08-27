@@ -6,6 +6,11 @@
 </p>
 
 ### Setup
+<div align="center">
+    <a href="https://github.com/Brashokish/Skipper-Md/fork">
+        <img title="Skipper-Md" src="https://img.shields.io/badge/FORK%20Skipper%20Md-3498DB?style=for-the-badge&logo=stackshare" />
+    </a>
+</div>
 
 ### Pair with WhatsApp
   <div align="center">
@@ -14,7 +19,6 @@
     </a>
 </div>
 
-**📌 DEPLOY ON HEROKU**
   
 <h2 style="color: #8E44AD; font-family: 'Courier New';">DEPLOY TO HEROKU</h2>
 <p align="center">
