@@ -13,7 +13,7 @@
     </a>
 </div>
 
-### Pair with WhatsApp
+## Pair with WhatsApp
   <div align="center">
     <a href="https://skipper-md-session.onrender.com/">
         <img title="PAIR CODE" src="https://img.shields.io/badge/GET%20SESSION-FF5733?style=for-the-badge&logo=msi&logoColor=white" width="220" height="38.45" />
