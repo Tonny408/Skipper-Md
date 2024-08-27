@@ -7,6 +7,13 @@
 
 ### Setup
 
+### Pair with WhatsApp
+  <div align="center">
+    <a href="https://skipper-md-session.onrender.com/">
+        <img title="PAIR CODE" src="https://img.shields.io/badge/GET%20SESSION-FF5733?style=for-the-badge&logo=msi&logoColor=white" width="220" height="38.45" />
+    </a>
+</div>
+
 **📌 DEPLOY ON HEROKU**
   
 <h2 style="color: #8E44AD; font-family: 'Courier New';">DEPLOY TO HEROKU</h2>
