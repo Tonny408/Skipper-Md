@@ -49,7 +49,7 @@
     "PUBLIC_MODE":
     {
       "description":"type yes to put your bot on public mode or no to put it on private mod",
-      "value":"no",
+      "value":"yes",
       "required":false
     }
 	,
@@ -65,7 +65,7 @@
     "SESSION_ID":
     {
       "description":"put your session ID , make sure it starts with eyJub2I...",   
-      "value":"",
+      "value":"eyJub2lzZUtleSI6eyJwcml2YXRlIjp7InR5cGUiOiJCdWZmZXIiLCJkYXRhIjoid0FYNFMzZ2ErdmNWd2cvVFhMRVhKTjJ4eVlQcmdkMHpjclNsUFEzcFlIdz0ifSwicHVibGljIjp7InR5cGUiOiJCdWZmZXIiLCJkYXRhIjoiVkNjenUyam00WXZMaWhjcG90SmpmTjI3RUtaNWowOGFsTzFreXUrYnFnaz0ifX0sInBhaXJpbmdFcGhlbWVyYWxLZXlQYWlyIjp7InByaXZhdGUiOnsidHlwZSI6IkJ1ZmZlciIsImRhdGEiOiJjS253QjkzcDZhTlZ1MUNjMkZEakZSK1Vha1F2OHRZd2NiSlRwT05aL2w4PSJ9LCJwdWJsaWMiOnsidHlwZSI6IkJ1ZmZlciIsImRhdGEiOiJwMHY4d1AwbkI0RDV6dklYVkJzaXc1ZmJXS0lGZ0pPLzIvYkpicU9aTnk4PSJ9fSwic2lnbmVkSWRlbnRpdHlLZXkiOnsicHJpdmF0ZSI6eyJ0eXBlIjoiQnVmZmVyIiwiZGF0YSI6IklNOWhSYXc5VXVGQ2NiVXF3L3ZMVmxnWEFUUXFQdWVxSGhra01MSHJWbGc9In0sInB1YmxpYyI6eyJ0eXBlIjoiQnVmZmVyIiwiZGF0YSI6IkhuVytXM0ErWElMOE13R0UwNHBidVdObkI4U2R0bm5id1l1SlA1ZFpKZ2s9In19LCJzaWduZWRQcmVLZXkiOnsia2V5UGFpciI6eyJwcml2YXRlIjp7InR5cGUiOiJCdWZmZXIiLCJkYXRhIjoiVUJZMzJxOWppaHVhZ2g0ZkdQa1FNc2dseUVuUFhUVVkybmt6NTBaUDIxdz0ifSwicHVibGljIjp7InR5cGUiOiJCdWZmZXIiLCJkYXRhIjoieGxUZ09IVmQzQVJydEVXNHFnWmJmdE5ORXFJcEV6K3hiRXI2YXdUMlRrbz0ifX0sInNpZ25hdHVyZSI6eyJ0eXBlIjoiQnVmZmVyIiwiZGF0YSI6Ik5EV2llVms3VlJReFhtTE1vYWpvbHBQUDA1d2l5bC9iekFnY2tMSlJ5WG14OVpVMFl1c2Q5bE5Uc3czM1Qyd25NanFRb1Y3M2YrbkJBRFdKZEhyQkJBPT0ifSwia2V5SWQiOjF9LCJyZWdpc3RyYXRpb25JZCI6MTEzLCJhZHZTZWNyZXRLZXkiOiJFdmNlSVhGVFlFU2VvdXkwNm9yYWtHVklmeUk4RGRlbEJnVjdHZFFpazJjPSIsInByb2Nlc3NlZEhpc3RvcnlNZXNzYWdlcyI6W10sIm5leHRQcmVLZXlJZCI6MzEsImZpcnN0VW51cGxvYWRlZFByZUtleUlkIjozMSwiYWNjb3VudFN5bmNDb3VudGVyIjowLCJhY2NvdW50U2V0dGluZ3MiOnsidW5hcmNoaXZlQ2hhdHMiOmZhbHNlfSwiZGV2aWNlSWQiOiI2dUhhWGpNNFFhaVVPdEY4bE9JWTJRIiwicGhvbmVJZCI6IjM2ZDc1MjVkLWFmNjAtNGY1OC1hNjdmLWIxMDU0YTg0MjYxYSIsImlkZW50aXR5SWQiOnsidHlwZSI6IkJ1ZmZlciIsImRhdGEiOiJEODQwdy9YL21ISkE4RGI3elNvNU02QnZublE9In0sInJlZ2lzdGVyZWQiOnRydWUsImJhY2t1cFRva2VuIjp7InR5cGUiOiJCdWZmZXIiLCJkYXRhIjoiWllYRURJMlQ0WE1SODFvRHFNelVtTldLWVlrPSJ9LCJyZWdpc3RyYXRpb24iOnt9LCJwYWlyaW5nQ29kZSI6IkhDMjhEQlFIIiwibWUiOnsiaWQiOiIyNTQ3Njk3ODc1MTU6ODNAcy53aGF0c2FwcC5uZXQiLCJuYW1lIjoiVGVkZHkifSwiYWNjb3VudCI6eyJkZXRhaWxzIjoiQ08zbXJMSURFSW42OUxZR0dBd2dBQ2dBIiwiYWNjb3VudFNpZ25hdHVyZUtleSI6Imx0WjlrSWpRTlk5N0M5dWthQmZWZGhkM05OOFc5S0ZqNHhpWDIxUUNkQVU9IiwiYWNjb3VudFNpZ25hdHVyZSI6Im81ZHRwUGZKQk5LY1RjL0dtRzBVMXFMc1B6anFOMVFMWGxac0dhZUVhSTBNaXhkeFRmSXJGeUd5Zi84YVMwQ0lNT1k4MkZnT1lseVdTRVdETXRKVkJRPT0iLCJkZXZpY2VTaWduYXR1cmUiOiJhUnJTZ2YwYVV2ckFtZ004cTRYTDljUUNoU0p6ckM1RW85QXhTWkw4TmNQSDhmUEhNSlVkTkZraGVlZnhwNVcvQ0VNUVNWRHErZEZ0WitUeHpoZVdDUT09In0sInNpZ25hbElkZW50aXRpZXMiOlt7ImlkZW50aWZpZXIiOnsibmFtZSI6IjI1NDc2OTc4NzUxNTo4M0BzLndoYXRzYXBwLm5ldCIsImRldmljZUlkIjowfSwiaWRlbnRpZmllcktleSI6eyJ0eXBlIjoiQnVmZmVyIiwiZGF0YSI6IkJaYldmWkNJMERXUGV3dmJwR2dYMVhZWGR6VGZGdlNoWStNWWw5dFVBblFGIn19XSwicGxhdGZvcm0iOiJzbWJhIiwibGFzdEFjY291bnRTeW5jVGltZXN0YW1wIjoxNzI1Nzc1MTI2LCJteUFwcFN0YXRlS2V5SWQiOiJBQUFBQUxVViJ9",
       "required": true
       
     },
@@ -74,14 +74,14 @@
     
     "desc": "Your Name",
     "required": false,
-    "value": "Tonny 408"
+    "value": "Teddy 🧸"
   },
     "OWNER_NUMBER":
   {
     
     "desc": "Your number , dont put '+' and put you area code(exemple of togo '228')",
     "required":false,
-    "value": "254798780465"
+    "value": "25476977515"
   },
     "WARN_COUNT":
   {
@@ -97,7 +97,7 @@
   },
   "PRESENCE":{
     "description":"Mark your presence: 1 to indicate that you are online even if you are not. 2 to indicate that you are currently typing a message. 3 to indicate that you are currently recording an audio. Or leave the field blank to indicate your real state.",
-    "value":"3",
+    "value":"2",
     "required": false
   },
   "ANTI_DELETE_MESSAGE" : {
