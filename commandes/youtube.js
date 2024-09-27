@@ -24,12 +24,17 @@ reaction: "💿"
     const topo = arg.join(" ");
     const yts = require("youtube-yts");
     const { youtubedl, youtubedlv2 } = require("@bochilteam/scraper"); // Use the bochilteam scraper
+
+    // Perform the YouTube search
     const search = await yts(topo);
     const videos = search.videos;
 
     if (videos && videos.length > 0 && videos[0]) {
       const video = videos[0];
       const urlElement = video.url;
+
+      // Log the video URL for debugging purposes
+      console.log("URL being passed to youtubedl:", urlElement);
 
       let infoMess = {
         image: { url: video.thumbnail },
@@ -38,17 +43,26 @@ reaction: "💿"
 
       await zk.sendMessage(origineMessage, infoMess, { quoted: ms });
 
-      // Attempt to download the audio using @bochilteam/scraper's youtubedl
+      // Try to download using @bochilteam/scraper's youtubedl
       let yt;
       try {
         yt = await youtubedl(urlElement);
+        console.log('Primary downloader success:', yt);
       } catch (scraperError) {
-        console.error('Error using youtubedl from @bochilteam/scraper:', scraperError);
+        console.error('Error using youtubedl from @bochilteam/scraper:', scraperError.message || scraperError);
         repondre("Error occurred using the primary downloader, trying backup...");
-        // Fallback to youtubedlv2 if youtubedl fails
-        yt = await youtubedlv2(urlElement);
+        
+        // Fallback to youtubedlv2 if the primary downloader fails
+        try {
+          yt = await youtubedlv2(urlElement);
+          console.log('Backup downloader success:', yt);
+        } catch (backupError) {
+          console.error('Error using youtubedlv2 from @bochilteam/scraper:', backupError.message || backupError);
+          return repondre('Both download attempts failed.');
+        }
       }
 
+      // If we reach here, we have successfully obtained the audio
       if (!yt || !yt.audio) {
         return repondre("Failed to download the audio.");
       }
@@ -81,6 +95,7 @@ reaction: "💿"
       }, { quoted: ms });
 
       console.log("Audio file sent successfully!");
+
     } else {
       repondre('No video results found.');
     }
@@ -89,6 +104,7 @@ reaction: "💿"
     repondre('An error occurred during the search or download process.');
   }
 });
+
 
   
 
