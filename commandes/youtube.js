@@ -23,8 +23,7 @@ reaction: "💿"
   try {
     const topo = arg.join(" ");
     const yts = require("youtube-yts");
-    const ytdl = require("ytdl-core");
-    const youtubedl = require('ytdl-core-discord');
+    const { youtubedl, youtubedlv2 } = require("@bochilteam/scraper"); // Use the bochilteam scraper
     const search = await yts(topo);
     const videos = search.videos;
 
@@ -39,20 +38,25 @@ reaction: "💿"
 
       await zk.sendMessage(origineMessage, infoMess, { quoted: ms });
 
-      // Download the audio using ytdl-core
-      const ytStream = await youtubedl(urlElement).catch(async _ => await ytdl(urlElement, { filter: 'audioonly' }));
-
-      // Error check: Ensure audio format is available
-      const formats = ytdl.filterFormats(ytStream.formats, 'audioonly');
-      const audioFormat = formats.find(format => format.audioBitrate === 128);
-
-      if (!audioFormat) {
-        return repondre('No audio format available for download.');
+      // Attempt to download the audio using @bochilteam/scraper's youtubedl
+      let yt;
+      try {
+        yt = await youtubedl(urlElement);
+      } catch (scraperError) {
+        console.error('Error using youtubedl from @bochilteam/scraper:', scraperError);
+        repondre("Error occurred using the primary downloader, trying backup...");
+        // Fallback to youtubedlv2 if youtubedl fails
+        yt = await youtubedlv2(urlElement);
       }
 
-      const dl_url = audioFormat.url;
-      const ttl = video.title;
-      const size = audioFormat.contentLength ? parseInt(audioFormat.contentLength, 10) : 0;
+      if (!yt || !yt.audio) {
+        return repondre("Failed to download the audio.");
+      }
+
+      // Extract audio information
+      const dl_url = yt.audio['128kbps'].download;
+      const ttl = yt.title;
+      const size = yt.audio['128kbps'].fileSizeH;
 
       // Check file size limit (assuming 10MB for non-premium users)
       const isPremium = false; // Replace with actual premium check logic
@@ -81,7 +85,7 @@ reaction: "💿"
       repondre('No video results found.');
     }
   } catch (error) {
-    console.error('Error processing song command:', error);
+    console.error('Error during search or download process:', error);
     repondre('An error occurred during the search or download process.');
   }
 });
