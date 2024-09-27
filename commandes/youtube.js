@@ -10,73 +10,72 @@ const yts1 = require("youtube-yts");
 
 skipper({
   nomCom: "play",
-  categorie: "Search",
-  reaction: "💿"
+categorie: "Search",
+reaction: "💿"
 }, async (origineMessage, zk, commandeOptions) => {
   const { ms, repondre, arg } = commandeOptions;
-     
+
   if (!arg[0]) {
-    repondre("wich song do you want.");
+    repondre("Which song do you want?");
     return;
   }
 
   try {
-    let topo = arg.join(" ")
+    const topo = arg.join(" ");
+    const yts = require("youtube-yts");
+    const fs = require("fs");
+    const ytdl = require("ytdl-core"); // Ensure ytdl-core is installed
+    const youtubedl = require('ytdl-core-discord'); // Better alternative for streaming
+    const youtubedlv2 = require('ytdl-core'); // Backup option
     const search = await yts(topo);
     const videos = search.videos;
 
     if (videos && videos.length > 0 && videos[0]) {
-      const urlElement = videos[0].url;
-          
-       let infoMess = {
-          image: {url : videos[0]. thumbnail},
-         caption : `\n*song name :* _${videos[0].title}_
+      const video = videos[0];
+      const urlElement = video.url;
 
-*Time :* _${videos[0].timestamp}_
+      let infoMess = {
+        image: { url: video.thumbnail },
+        caption: `\n*Song Name:* _${video.title}_\n\n*Duration:* _${video.timestamp}_\n\n*Url:* _${video.url}_\n\n_*Downloading...*_\n\n`
+      };
 
-*Url :* _${videos[0].url}_
+      await zk.sendMessage(origineMessage, infoMess, { quoted: ms });
 
+      // Download the audio
+      const yt = await youtubedl(urlElement).catch(async _ => await youtubedlv2(urlElement));
+      const dl_url = await yt.audio['128kbps'].download();
+      const ttl = await yt.title;
+      const size = await yt.audio['128kbps'].fileSizeH;
 
-_*on downloading...*_\n\n`
-       }
+      // Check file size limit (assuming 10MB for non-premium users)
+      const isPremium = false; // Replace with actual premium check logic
+      if (size > 10 * 1024 * 1024 && !isPremium) {
+        return repondre('The file size exceeds the download limit. Please try a smaller file.');
+      }
 
+      // Send the audio as a document
+      await zk.sendMessage(origineMessage, {
+        document: { url: dl_url },
+        mimetype: 'audio/mpeg',
+        fileName: `${ttl}.mp3`,
+        contextInfo: {
+          externalAdReply: {
+            title: ttl,
+            thumbnailUrl: video.thumbnail,
+            mediaType: 1,
+            showAdAttribution: true,
+            renderLargerThumbnail: true
+          }
+        }
+      }, { quoted: ms });
       
-
-      
-
-      
-       zk.sendMessage(origineMessage,infoMess,{quoted:ms}) ;
-      // Obtenir le flux audio de la vidéo
-      const audioStream = ytdl(urlElement, { filter: 'audioonly', quality: 'highestaudio' });
-
-      // Nom du fichier local pour sauvegarder le fichier audio
-      const filename = 'audio.mp3';
-
-      // Écrire le flux audio dans un fichier local
-      const fileStream = fs.createWriteStream(filename);
-      audioStream.pipe(fileStream);
-
-      fileStream.on('finish', () => {
-        // Envoi du fichier audio en utilibsant l'URL du fichier local
-      
-
-     zk.sendMessage(origineMessage, { audio: { url:"audio.mp3"},mimetype:'audio/mp4' }, { quoted: ms,ptt: false });
-        console.log("Envoi du fichier audio terminé !");
-
-     
-      });
-
-      fileStream.on('error', (error) => {
-        console.error('Erreur lors de l\'écriture du fichier audio :', error);
-        repondre('Une erreur est survenue lors de l\'écriture du fichier audio.');
-      });
+      console.log("Audio file sent successfully!");
     } else {
-      repondre('Aucune vidéo trouvée.');
+      repondre('No video results found.');
     }
   } catch (error) {
-    console.error('Erreur lors de la recherche ou du téléchargement de la vidéo :', error);
-    
-    repondre('Une erreur est survenue lors de la recherche ou du téléchargement de la vidéo.');
+    console.error('Error processing song command:', error);
+    repondre('An error occurred during the search or download process.');
   }
 });
 
