@@ -23,10 +23,8 @@ reaction: "💿"
   try {
     const topo = arg.join(" ");
     const yts = require("youtube-yts");
-    const fs = require("fs");
-    const ytdl = require("ytdl-core"); // Ensure ytdl-core is installed
-    const youtubedl = require('ytdl-core-discord'); // Better alternative for streaming
-    const youtubedlv2 = require('ytdl-core'); // Backup option
+    const ytdl = require("ytdl-core");
+    const youtubedl = require('ytdl-core-discord');
     const search = await yts(topo);
     const videos = search.videos;
 
@@ -41,11 +39,20 @@ reaction: "💿"
 
       await zk.sendMessage(origineMessage, infoMess, { quoted: ms });
 
-      // Download the audio
-      const yt = await youtubedl(urlElement).catch(async _ => await youtubedlv2(urlElement));
-      const dl_url = await yt.audio['128kbps'].download();
-      const ttl = await yt.title;
-      const size = await yt.audio['128kbps'].fileSizeH;
+      // Download the audio using ytdl-core
+      const ytStream = await youtubedl(urlElement).catch(async _ => await ytdl(urlElement, { filter: 'audioonly' }));
+
+      // Error check: Ensure audio format is available
+      const formats = ytdl.filterFormats(ytStream.formats, 'audioonly');
+      const audioFormat = formats.find(format => format.audioBitrate === 128);
+
+      if (!audioFormat) {
+        return repondre('No audio format available for download.');
+      }
+
+      const dl_url = audioFormat.url;
+      const ttl = video.title;
+      const size = audioFormat.contentLength ? parseInt(audioFormat.contentLength, 10) : 0;
 
       // Check file size limit (assuming 10MB for non-premium users)
       const isPremium = false; // Replace with actual premium check logic
@@ -68,7 +75,7 @@ reaction: "💿"
           }
         }
       }, { quoted: ms });
-      
+
       console.log("Audio file sent successfully!");
     } else {
       repondre('No video results found.');
