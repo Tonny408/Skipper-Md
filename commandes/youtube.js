@@ -9,13 +9,13 @@ const yts1 = require("youtube-yts");
 //var fs =require("fs-extra")
 
 skipper({
-  nomCom: "play",
+nomCom: "play",
 categorie: "Search",
 reaction: "💿"
 }, async (origineMessage, zk, commandeOptions) => {
-  const { ms, repondre, arg } = commandeOptions;
+    const { ms, repondre, arg } = commandeOptions;
 
-  if (!arg[0]) {
+    if (!arg[0]) {
         return repondre("Provide a song name to download!");
     }
 
@@ -37,6 +37,7 @@ reaction: "💿"
 
         const q = '128kbps';
         const v = anup3k.url;
+        console.log('Video URL:', v);
         
         // Try downloading with youtubedl first, fallback to youtubedlv2
         let yt;
@@ -45,10 +46,16 @@ reaction: "💿"
             console.log('Primary downloader success:', yt);
         } catch (scraperError) {
             console.error('Error using primary downloader, trying backup:', scraperError);
-            yt = await youtubedlv2(v);
-            console.log('Backup downloader success:', yt);
+            try {
+                yt = await youtubedlv2(v);
+                console.log('Backup downloader success:', yt);
+            } catch (backupError) {
+                console.error('Backup downloader failed:', backupError);
+                return repondre('Both download methods failed.');
+            }
         }
 
+        console.log('Available audio formats:', yt.audio);
         const dl_url = await yt.audio[q].download();
         const ttl = await yt.title;
         const size = await yt.audio[q].fileSizeH;
@@ -60,6 +67,7 @@ reaction: "💿"
         }
 
         // Send the audio as a document
+        console.log('Sending message to:', origineMessage);
         await zk.sendMessage(origineMessage, {
             document: { url: dl_url },
             mimetype: 'audio/mpeg',
@@ -78,10 +86,11 @@ reaction: "💿"
         console.log("Audio file sent successfully!");
 
     } catch (error) {
-        console.error('Error processing song command:', error);
+        console.error('General error processing song command:', error);
         repondre('An error occurred during the search or download process.');
     }
-}
+        }
+        
 
 
   
