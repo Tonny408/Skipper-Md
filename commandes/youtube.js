@@ -16,94 +16,72 @@ reaction: "💿"
   const { ms, repondre, arg } = commandeOptions;
 
   if (!arg[0]) {
-    repondre("Which song do you want?");
-    return;
-  }
-
-  try {
-    const topo = arg.join(" ");
-    const yts = require("youtube-yts");
-    const { youtubedl, youtubedlv2 } = require("@bochilteam/scraper"); // Use the bochilteam scraper
-
-    // Perform the YouTube search
-    const search = await yts(topo);
-    const videos = search.videos;
-
-    if (videos && videos.length > 0 && videos[0]) {
-      const video = videos[0];
-      const urlElement = video.url;
-
-      // Log the video URL for debugging purposes
-      console.log("URL being passed to youtubedl:", urlElement);
-
-      let infoMess = {
-        image: { url: video.thumbnail },
-        caption: `\n*Song Name:* _${video.title}_\n\n*Duration:* _${video.timestamp}_\n\n*Url:* _${video.url}_\n\n_*Downloading...*_\n\n`
-      };
-
-      await zk.sendMessage(origineMessage, infoMess, { quoted: ms });
-
-      // Try to download using @bochilteam/scraper's youtubedl
-      let yt;
-      try {
-        yt = await youtubedl(urlElement);
-        console.log('Primary downloader success:', yt);
-      } catch (scraperError) {
-        console.error('Error using youtubedl from @bochilteam/scraper:', scraperError.message || scraperError);
-        repondre("Error occurred using the primary downloader, trying backup...");
-        
-        // Fallback to youtubedlv2 if the primary downloader fails
-        try {
-          yt = await youtubedlv2(urlElement);
-          console.log('Backup downloader success:', yt);
-        } catch (backupError) {
-          console.error('Error using youtubedlv2 from @bochilteam/scraper:', backupError.message || backupError);
-          return repondre('Both download attempts failed.');
-        }
-      }
-
-      // If we reach here, we have successfully obtained the audio
-      if (!yt || !yt.audio) {
-        return repondre("Failed to download the audio.");
-      }
-
-      // Extract audio information
-      const dl_url = yt.audio['128kbps'].download;
-      const ttl = yt.title;
-      const size = yt.audio['128kbps'].fileSizeH;
-
-      // Check file size limit (assuming 10MB for non-premium users)
-      const isPremium = false; // Replace with actual premium check logic
-      if (size > 10 * 1024 * 1024 && !isPremium) {
-        return repondre('The file size exceeds the download limit. Please try a smaller file.');
-      }
-
-      // Send the audio as a document
-      await zk.sendMessage(origineMessage, {
-        document: { url: dl_url },
-        mimetype: 'audio/mpeg',
-        fileName: `${ttl}.mp3`,
-        contextInfo: {
-          externalAdReply: {
-            title: ttl,
-            thumbnailUrl: video.thumbnail,
-            mediaType: 1,
-            showAdAttribution: true,
-            renderLargerThumbnail: true
-          }
-        }
-      }, { quoted: ms });
-
-      console.log("Audio file sent successfully!");
-
-    } else {
-      repondre('No video results found.');
+        return repondre("Provide a song name to download!");
     }
-  } catch (error) {
-    console.error('Error during search or download process:', error);
-    repondre('An error occurred during the search or download process.');
-  }
-});
+
+    const yts = require("youtube-yts");
+    const { youtubedl, youtubedlv2 } = require("@bochilteam/scraper");
+    
+    try {
+        console.log('Starting song command processing...');
+        const topo = arg.join(" ");
+        const yt_play = await yts(topo);
+        console.log('Search results:', yt_play);
+
+        if (!yt_play.videos || yt_play.videos.length === 0) {
+            return repondre('No video results found.');
+        }
+
+        const anup3k = yt_play.videos[0];
+        console.log('Selected video:', anup3k);
+
+        const q = '128kbps';
+        const v = anup3k.url;
+        
+        // Try downloading with youtubedl first, fallback to youtubedlv2
+        let yt;
+        try {
+            yt = await youtubedl(v);
+            console.log('Primary downloader success:', yt);
+        } catch (scraperError) {
+            console.error('Error using primary downloader, trying backup:', scraperError);
+            yt = await youtubedlv2(v);
+            console.log('Backup downloader success:', yt);
+        }
+
+        const dl_url = await yt.audio[q].download();
+        const ttl = await yt.title;
+        const size = await yt.audio[q].fileSizeH;
+
+        // Check file size limit (10MB for non-premium)
+        const isPremium = false; // Replace with your actual premium check logic
+        if (size > 10 * 1024 * 1024 && !isPremium) {
+            return repondre('File size exceeds the download limit. Please try a smaller file.');
+        }
+
+        // Send the audio as a document
+        await zk.sendMessage(origineMessage, {
+            document: { url: dl_url },
+            mimetype: 'audio/mpeg',
+            fileName: `${ttl}.mp3`,
+            contextInfo: {
+                externalAdReply: {
+                    title: ttl,
+                    thumbnailUrl: anup3k.thumbnail,
+                    mediaType: 1,
+                    showAdAttribution: true,
+                    renderLargerThumbnail: true
+                }
+            }
+        }, { quoted: ms });
+
+        console.log("Audio file sent successfully!");
+
+    } catch (error) {
+        console.error('Error processing song command:', error);
+        repondre('An error occurred during the search or download process.');
+    }
+}
 
 
   
