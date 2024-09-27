@@ -1,8 +1,11 @@
-const { youtubedl, youtubedlv2 } = require("@bochilteam/scraper");
 const { zokou } = require("../framework/zokou");
 const yts = require('yt-search');
+const ytdl = require('ytdl-core');
 const fs = require('fs');
+const yt=require("../framework/dl/ytdl-core.js")
 const ffmpeg = require("fluent-ffmpeg");
+const yts1 = require("youtube-yts");
+//var fs =require("fs-extra")
 
 zokou({
   nomCom: "play",
@@ -10,52 +13,73 @@ zokou({
   reaction: "💿"
 }, async (origineMessage, zk, commandeOptions) => {
   const { ms, repondre, arg } = commandeOptions;
-
+     
   if (!arg[0]) {
-    repondre("Which song do you want?");
+    repondre("wich song do you want.");
     return;
   }
 
   try {
-    let topo = arg.join(" ");
+    let topo = arg.join(" ")
     const search = await yts(topo);
     const videos = search.videos;
 
     if (videos && videos.length > 0 && videos[0]) {
       const urlElement = videos[0].url;
+          
+       let infoMess = {
+          image: {url : videos[0]. thumbnail},
+         caption : `\n*song name :* _${videos[0].title}_
 
-      let infoMess = {
-        image: { url: videos[0].thumbnail },
-        caption: `\n*Song Name:* _${videos[0].title}_\n*Time:* _${videos[0].timestamp}_\n*Url:* _${videos[0].url}_\n_*On downloading...*_\n\n`
-      }
+*Time :* _${videos[0].timestamp}_
 
-      zk.sendMessage(origineMessage, infoMess, { quoted: ms });
+*Url :* _${videos[0].url}_
 
-      // Use youtubedl to get audio stream
-      const audioStream = await youtubedl(urlElement, { filter: 'audioonly', quality: 'highestaudio' });
 
-      // Save the audio to a file
+_*on downloading...*_\n\n`
+       }
+
+      
+
+      
+
+      
+       zk.sendMessage(origineMessage,infoMess,{quoted:ms}) ;
+      // Obtenir le flux audio de la vidéo
+      const audioStream = ytdl(urlElement, { filter: 'audioonly', quality: 'highestaudio' });
+
+      // Nom du fichier local pour sauvegarder le fichier audio
       const filename = 'audio.mp3';
+
+      // Écrire le flux audio dans un fichier local
       const fileStream = fs.createWriteStream(filename);
       audioStream.pipe(fileStream);
 
       fileStream.on('finish', () => {
-        zk.sendMessage(origineMessage, { audio: { url: "audio.mp3" }, mimetype: 'audio/mp4' }, { quoted: ms, ptt: false });
-        console.log("Audio file sent!");
+        // Envoi du fichier audio en utilisant l'URL du fichier local
+      
+
+     zk.sendMessage(origineMessage, { audio: { url:"audio.mp3"},mimetype:'audio/mp4' }, { quoted: ms,ptt: false });
+        console.log("Envoi du fichier audio terminé !");
+
+     
       });
 
       fileStream.on('error', (error) => {
-        console.error('Error writing audio file:', error);
-        repondre('An error occurred while writing the audio file.');
+        console.error('Erreur lors de l\'écriture du fichier audio :', error);
+        repondre('Une erreur est survenue lors de l\'écriture du fichier audio.');
       });
     } else {
-      repondre('No video found.');
+      repondre('Aucune vidéo trouvée.');
     }
   } catch (error) {
-    console.error('Error searching or downloading the video:', error);
-    repondre('An error occurred while searching or downloading the video.');
+    console.error('Erreur lors de la recherche ou du téléchargement de la vidéo :', error);
+    
+    repondre('Une erreur est survenue lors de la recherche ou du téléchargement de la vidéo.');
   }
 });
+
+  
 
 zokou({
   nomCom: "video",
@@ -65,7 +89,7 @@ zokou({
   const { arg, ms, repondre } = commandeOptions;
 
   if (!arg[0]) {
-    repondre("Insert video name");
+    repondre("insert video name");
     return;
   }
 
@@ -75,36 +99,46 @@ zokou({
     const videos = search.videos;
 
     if (videos && videos.length > 0 && videos[0]) {
-      const element = videos[0];
+      const Element = videos[0];
 
-      let infoMess = {
+      let InfoMess = {
         image: { url: videos[0].thumbnail },
-        caption: `*Video Name:* _${element.title}_\n*Time:* _${element.timestamp}_\n*Url:* _${element.url}_\n_*On downloading...*_\n\n`
+        caption: `*Video name :* _${Element.title}_
+*Time :* _${Element.timestamp}_
+*Url :* _${Element.url}_
+_*On downloading...*_\n\n`
       };
 
-      zk.sendMessage(origineMessage, infoMess, { quoted: ms });
+      zk.sendMessage(origineMessage, InfoMess, { quoted: ms });
 
-      // Use youtubedl to get video stream
-      const videoStream = await youtubedl(element.url, { filter: 'videoonly', quality: 'highest' });
+      // Obtenir les informations de la vidéo à partir du lien YouTube
+      const videoInfo = await ytdl.getInfo(Element.url);
+      // Format vidéo avec la meilleure qualité disponible
+      const format = ytdl.chooseFormat(videoInfo.formats, { quality: '18' });
+      // Télécharger la vidéo
+      const videoStream = ytdl.downloadFromInfo(videoInfo, { format });
 
-      // Save the video to a file
+      // Nom du fichier local pour sauvegarder la vidéo
       const filename = 'video.mp4';
+
+      // Écrire le flux vidéo dans un fichier local
       const fileStream = fs.createWriteStream(filename);
       videoStream.pipe(fileStream);
 
       fileStream.on('finish', () => {
-        zk.sendMessage(origineMessage, { video: { url: "./video.mp4" }, caption: "*FLASH-MD*", gifPlayback: false }, { quoted: ms });
+        // Envoi du fichier vidéo en utilisant l'URL du fichier local
+        zk.sendMessage(origineMessage, { video: { url :"./video.mp4"} , caption: "*FLASH-MD*", gifPlayback: false }, { quoted: ms });
       });
 
       fileStream.on('error', (error) => {
-        console.error('Error writing video file:', error);
-        repondre('An error occurred while writing the video file.');
+        console.error('Erreur lors de l\'écriture du fichier vidéo :', error);
+        repondre('Une erreur est survenue lors de l\'écriture du fichier vidéo.');
       });
     } else {
-      repondre('No video found.');
+      repondre('No video found');
     }
   } catch (error) {
-    console.error('Error searching or downloading the video:', error);
-    repondre('An error occurred while searching or downloading the video.');
+    console.error('Erreur lors de la recherche ou du téléchargement de la vidéo :', error);
+    repondre('Une erreur est survenue lors de la recherche ou du téléchargement de la vidéo.');
   }
 });
