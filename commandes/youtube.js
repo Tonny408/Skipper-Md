@@ -1,6 +1,7 @@
 const { skipper } = require("../framework/skipper");
 const yts = require('yt-search');
 const ytdl = require('@distube/ytdl-core');
+const { youtubedl, youtubedlv2 } = require("@bochilteam/scraper");
 const fs = require('fs');
 const yt=require("../framework/dl/ytdl-core.js")
 const ffmpeg = require("fluent-ffmpeg");
