@@ -51,4 +51,3 @@ Enjoy the diverse features of the Skipper-Md to enhance your conversations and m
 - [**MGTOPHAZ ZENON-AI**](https://wa.me/254705243111)
 - [**KISH𓅃 Kish-MD**](https://wa.me/254745936840)
 
-- [*CASEYRHODES ZHEZHO-MD**](https://wa.me/254112192119)
