@@ -1,9 +1,9 @@
 {
-  "name":"SKIPPER-MD",
-  "description":"An easy and simple WhatsApp bot developed by Tonny 408",
+  "name":"SAFARI-MD",
+  "description":"An easy and simple WhatsApp bot developed by Dreamkid Lewi",
   "keywords":["bot","node","baileys","whatsapp"],
-  "logo":"https://telegra.ph/file/e78fcfd78dd8f2f3f6d8e.jpg",
-  "repository":"https://github.com/Tonny408/Skipper-Md",
+  "logo":"https://telegra.ph/file/137aa522308ddc7f801a2.jpg",
+  "repository":"https://github.com/Lewislusweti/SAFARI-MD",
   "succes_url":"/",
   "stack":"container",
   "env":{
@@ -35,14 +35,14 @@
     "BOT_NAME" : {
        
       "description":"put A name for your bot",
-      "value":"SKIPPER-MD",
+      "value":"SAFARI-MD",
       "required":false
 
     } ,
      "BOT_MENU_LINKS" : {
     
       "description":"add one or many link for your bot menu  ; eg : url1,url2,url3.....",
-      "value":"https://telegra.ph/file/e78fcfd78dd8f2f3f6d8e.jpg",
+      "value":"https://telegra.ph/file/137aa522308ddc7f801a2.jpg",
       "required":false
        
      },
@@ -74,14 +74,14 @@
     
     "desc": "Your Name",
     "required": false,
-    "value": "Tonny 408"
+    "value": "𓆏Lewi"
   },
     "OWNER_NUMBER":
   {
     
     "desc": "Your number , dont put '+' and put you area code(exemple of togo '228')",
     "required":false,
-    "value": "254798780465"
+    "value": "254741749876"
   },
     "WARN_COUNT":
   {
