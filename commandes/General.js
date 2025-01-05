@@ -56,7 +56,7 @@ skipper({ nomCom: "dev", categorie: "General", reaction: "💞" }, async (dest, 
 
     const devs = [
       { nom: "Tonny408", numero: "254798780465" },
-      { nom: "᚛Brashokish᚜", numero: "254735905972" },
+      { nom: "᚛Popkid᚜", numero: "254111385747" },
       { nom: "ⁱ𝐌𝐆𝐓𝐎𝐏𝐇𝐀𝐙!-)ᵈ× :", numero: "254705243111" },
         
       // Ajoute d'autres développeurs ici avec leur nom et numéro
