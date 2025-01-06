@@ -1,36 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 FROM node:lts-buster
 
 RUN apt-get update && \
@@ -42,16 +9,16 @@ RUN apt-get update && \
   npm i pm2 -g && \
   rm -rf /var/lib/apt/lists/*
   
-RUN git clone https://github.com/Tonny408/Skipper-Md  /root/Skipper
-WORKDIR /root/Skipper/
+RUN git clone https://github.com/Luffy2ndAccount/Zokou-english-v  /root/Zokou_BOt
+WORKDIR /root/Zokou_Bot/
 
 
 COPY package.json .
 RUN npm install pm2 -g
-RUN npm install --legacy-peer-deps
+RUN npm install
 
 COPY . .
 
 EXPOSE 5000
 
-CMD ["node", "index.js"]
+CMD ["npm", "run" , "web"]
