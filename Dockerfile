@@ -9,16 +9,17 @@ RUN apt-get update && \
   npm i pm2 -g && \
   rm -rf /var/lib/apt/lists/*
   
-RUN git clone https://github.com/Luffy2ndAccount/Zokou-english-v  /root/Zokou_BOt
-WORKDIR /root/Zokou_Bot/
+RUN  git clone https://github.com/Tonny408/Skipper-Md  /root/zero_BOt
+WORKDIR /root/zero_Bot/
+
 
 
 COPY package.json .
 RUN npm install pm2 -g
-RUN npm install
+RUN npm install --legacy-peer-deps
 
 COPY . .
 
 EXPOSE 5000
 
-CMD ["npm", "run" , "web"]
+CMD ["node", "index.js"]
