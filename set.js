@@ -1,1 +1,61 @@
-const a65_0x461bdd=a65_0x31ca;(function(_0x382ec5,_0x40a710){const _0x399e27=a65_0x31ca,_0xf9b033=_0x382ec5();while(!![]){try{const _0x54e455=-parseInt(_0x399e27(0x1f5))/0x1+parseInt(_0x399e27(0x216))/0x2+parseInt(_0x399e27(0x20f))/0x3*(-parseInt(_0x399e27(0x215))/0x4)+parseInt(_0x399e27(0x20c))/0x5*(-parseInt(_0x399e27(0x1f7))/0x6)+parseInt(_0x399e27(0x1fb))/0x7+parseInt(_0x399e27(0x210))/0x8*(-parseInt(_0x399e27(0x20e))/0x9)+parseInt(_0x399e27(0x204))/0xa;if(_0x54e455===_0x40a710)break;else _0xf9b033['push'](_0xf9b033['shift']());}catch(_0x3966e5){_0xf9b033['push'](_0xf9b033['shift']());}}}(a65_0x3a52,0x1fe6d));const fs=require('fs-extra'),{Sequelize}=require(a65_0x461bdd(0x209));if(fs[a65_0x461bdd(0x207)](a65_0x461bdd(0x208)))require(a65_0x461bdd(0x200))['config']({'path':__dirname+'/set.env'});const path=require('path'),databasePath=path[a65_0x461bdd(0x203)](__dirname,a65_0x461bdd(0x211)),DATABASE_URL=process[a65_0x461bdd(0x1f3)][a65_0x461bdd(0x1f8)]===undefined?databasePath:process[a65_0x461bdd(0x1f3)]['DATABASE_URL'];module[a65_0x461bdd(0x206)]={'session':process[a65_0x461bdd(0x1f3)][a65_0x461bdd(0x212)]||a65_0x461bdd(0x1f4),'PREFIXE':process['env'][a65_0x461bdd(0x20b)]||'~','OWNER_NAME':process[a65_0x461bdd(0x1f3)][a65_0x461bdd(0x205)]||a65_0x461bdd(0x213),'NUMERO_OWNER':process[a65_0x461bdd(0x1f3)][a65_0x461bdd(0x20a)]||'Djalega','AUTO_READ_STATUS':process[a65_0x461bdd(0x1f3)][a65_0x461bdd(0x1ee)]||a65_0x461bdd(0x1f1),'AUTO_DOWNLOAD_STATUS':process['env'][a65_0x461bdd(0x1e9)]||a65_0x461bdd(0x1f1),'BOT':process[a65_0x461bdd(0x1f3)][a65_0x461bdd(0x1f6)]||a65_0x461bdd(0x1eb),'URL':process[a65_0x461bdd(0x1f3)][a65_0x461bdd(0x1fc)]||a65_0x461bdd(0x1ea),'MODE':process[a65_0x461bdd(0x1f3)][a65_0x461bdd(0x218)]||a65_0x461bdd(0x1ec),'PM_PERMIT':process[a65_0x461bdd(0x1f3)][a65_0x461bdd(0x217)]||'no','HEROKU_APP_NAME':process[a65_0x461bdd(0x1f3)][a65_0x461bdd(0x202)]||null,'HEROKU_APY_KEY':process[a65_0x461bdd(0x1f3)][a65_0x461bdd(0x201)]||null,'WARN_COUNT':process[a65_0x461bdd(0x1f3)][a65_0x461bdd(0x1f0)]||'3','ETAT':process[a65_0x461bdd(0x1f3)][a65_0x461bdd(0x1ef)]||'','DP':process[a65_0x461bdd(0x1f3)][a65_0x461bdd(0x20d)]||'yes','CHATBOT':process['env']['PM_CHATBOT']||'no','HEROKU':process[a65_0x461bdd(0x1f3)][a65_0x461bdd(0x1ed)]||a65_0x461bdd(0x1ec),'ANTI_VV':process[a65_0x461bdd(0x1f3)][a65_0x461bdd(0x1f2)]||'no','ANTI_CMD_SPAM':process[a65_0x461bdd(0x1f3)][a65_0x461bdd(0x214)]||'no','DATABASE_URL':DATABASE_URL,'DATABASE':DATABASE_URL===databasePath?a65_0x461bdd(0x1fd):a65_0x461bdd(0x1fd)};let fichier=require[a65_0x461bdd(0x1ff)](__filename);function a65_0x3a52(){const _0x3a01f2=['PREFIX','7340tgweGx','STARTING_BOT_MESSAGE','5742oMSFBI','316530IZbiRM','1704yCwtgG','./database.db','SESSION_ID','Zokou-Md','ANTI_COMMAND_SPAM','4VGCXtL','207052kkQCNh','PM_PERMIT','PUBLIC_MODE','AUTO_DOWNLOAD_STATUS','https://static.animecorner.me/2023/08/op2.jpg','Zokou_MD','yes','HEROKU','AUTO_READ_STATUS','PRESENCE','WARN_COUNT','non','ANTI_VIEW_ONCE','env','zokk','66608SJlWRa','BOT_NAME','936AOxMrQ','DATABASE_URL','log','watchFile','1603259fIGGiy','BOT_MENU_LINKS','postgres://db_7xp9_user:6hwmTN7rGPNsjlBEHyX49CXwrG7cDeYi@dpg-cj7ldu5jeehc73b2p7g0-a.oregon-postgres.render.com/db_7xp9','mise\x20à\x20jour\x20','resolve','dotenv','HEROKU_APY_KEY','HEROKU_APP_NAME','join','3351260yPNDYW','OWNER_NAME','exports','existsSync','set.env','sequelize','NUMERO_OWNER'];a65_0x3a52=function(){return _0x3a01f2;};return a65_0x3a52();}function a65_0x31ca(_0x110290,_0x3b992f){const _0x3a523a=a65_0x3a52();return a65_0x31ca=function(_0x31cacc,_0x3252a7){_0x31cacc=_0x31cacc-0x1e9;let _0xba481f=_0x3a523a[_0x31cacc];return _0xba481f;},a65_0x31ca(_0x110290,_0x3b992f);}fs[a65_0x461bdd(0x1fa)](fichier,()=>{const _0x5beeed=a65_0x461bdd;fs['unwatchFile'](fichier),console[_0x5beeed(0x1f9)](_0x5beeed(0x1fe)+__filename),delete require['cache'][fichier],require(fichier);});
+const fs = require('fs-extra');
+const { Sequelize } = require('sequelize');
+if (fs.existsSync('set.env'))
+    require('dotenv').config({ path: __dirname + '/set.env' });
+const path = require("path");
+const databasePath = path.join(__dirname, './database.db');
+const DATABASE_URL = process.env.DATABASE_URL === undefined
+    ? databasePath
+    : process.env.DATABASE_URL;
+module.exports = { session: process.env.SESSION_ID || 'BELTAH-MD;;;',
+    PREFIXE: process.env.PREFIX || "+",
+    GITHUB : process.env.GITHUB|| 'https://github.com/Popkiddevs/POPKID-XTECH',
+    OWNER_NAME : process.env.OWNER_NAME || "Popkid Tech",
+    NUMERO_OWNER : process.env.NUMERO_OWNER || "254111385747",
+    ANTICALL: process.env.ANTICALL || "non",
+    AUTO_READ_STATUS: process.env.AUTO_READ_STATUS || "non",
+    AUTO_DOWNLOAD_STATUS: process.env.AUTO_DOWNLOAD_STATUS || 'non',
+    AUTOREAD_MESSAGES: process.env.AUTOREAD_MESSAGES || "non",
+    AUTO_REACT: process.env.AUTO_REACTION || "non",
+    GURL: process.env.GURL  || "https://whatsapp.com/channel/0029VaRHDBKKmCPKp9B2uH2F",
+    WEBSITE :process.env.GURL || "https://whatsapp.com/channel/0029VaRHDBKKmCPKp9B2uH2F",
+    CAPTION : process.env.CAPTION || "ᴘᴏᴡᴇʀᴇᴅ ʙʏ POPKID-MD",
+    BOT : process.env.BOT_NAME || 'POPKID-MD',
+    URL : process.env.BOT_MENU_LINKS || '',
+    MODE: process.env.PUBLIC_MODE || "no",
+    TIMEZONE: process.env.TIMEZONE || "Africa/Nairobi", 
+    PM_PERMIT: process.env.PM_PERMIT || 'no',
+    HEROKU_APP_NAME : process.env.HEROKU_APP_NAME || null,
+    HEROKU_APY_KEY : process.env.HEROKU_APY_KEY || null,
+    WARN_COUNT : process.env.WARN_COUNT || '3' ,
+    ETAT : process.env.PRESENCE || '',
+    //GPT : process.env.OPENAI_API_KEY || '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',
+    DP : process.env.STARTING_BOT_MESSAGE || "yes",
+    ADM : process.env.ANTI_DELETE_MESSAGE || 'no',
+    CHATBOT : process.env.PM_CHATBOT || 'no',  
+    DATABASE_URL,
+    DATABASE: DATABASE_URL === databasePath
+        ? "postgres://db_7xp9_user:6hwmTN7rGPNsjlBEHyX49CXwrG7cDeYi@dpg-cj7ldu5jeehc73b2p7g0-a.oregon-postgres.render.com/db_7xp9" : "postgres://db_7xp9_user:6hwmTN7rGPNsjlBEHyX49CXwrG7cDeYi@dpg-cj7ldu5jeehc73b2p7g0-a.oregon-postgres.render.com/db_7xp9",
+    /* new Sequelize({
+     dialect: 'sqlite',
+     storage: DATABASE_URL,
+     logging: false,
+})
+: new Sequelize(DATABASE_URL, {
+     dialect: 'postgres',
+     ssl: true,
+     protocol: 'postgres',
+     dialectOptions: {
+         native: true,
+         ssl: { require: true, rejectUnauthorized: false },
+     },
+     logging: false,
+}),*/
+};
+let fichier = require.resolve(__filename);
+fs.watchFile(fichier, () => {
+    fs.unwatchFile(fichier);
+    console.log(`mise à jour ${__filename}`);
+    delete require.cache[fichier];
+    require(fichier);
+});
