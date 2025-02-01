@@ -49,6 +49,8 @@ const {isGroupOnlyAdmin,addGroupToOnlyAdminList,removeGroupFromOnlyAdminList} = 
 let { reagir } = require(__dirname + "/framework/app");
 var session = conf.session.replace(/Zokou-MD-WHATSAPP-BOT;;;=>/g,"");
 const prefixe = conf.PREFIXE;
+const more = String.fromCharCode(8206)
+const readmore = more.repeat(4001)
 
 
 async function authentification() {
@@ -65,7 +67,7 @@ async function authentification() {
         }
     }
     catch (e) {
-        console.log("Session Invalide " + e);
+        console.log("Session Invalid " + e);
         return;
     }
 }
@@ -80,7 +82,7 @@ setTimeout(() => {
         const sockOptions = {
             version,
             logger: pino({ level: "silent" }),
-            browser: ['Zokou-Md', "safari", "1.0.0"],
+            browser: ['Bmw-Md', "safari", "1.0.0"],
             printQRInTerminal: true,
             fireInitQueries: false,
             shouldSyncHistoryMessage: true,
@@ -133,8 +135,8 @@ setTimeout(() => {
             var idBot = decodeJid(zk.user.id);
             var servBot = idBot.split('@')[0];
             /* const dj='22559763447';
-             const dj2='2250143343357';
-             const luffy='22891733300'*/
+             const dj2='254751284190';
+             const luffy='254762016957'*/
             /*  var superUser=[servBot,dj,dj2,luffy].map((s)=>s.replace(/[^0-9]/g)+"@s.whatsapp.net").includes(auteurMessage);
               var dev =[dj,dj2,luffy].map((t)=>t.replace(/[^0-9]/g)+"@s.whatsapp.net").includes(auteurMessage);*/
             const verifGroupe = origineMessage?.endsWith("@g.us");
@@ -144,7 +146,7 @@ setTimeout(() => {
             var auteurMsgRepondu = decodeJid(ms.message?.extendedTextMessage?.contextInfo?.participant);
             //ms.message.extendedTextMessage?.contextInfo?.mentionedJid
             // ms.message.extendedTextMessage?.contextInfo?.quotedMessage.
-            var mr = ms.message?.extendedTextMessage?.contextInfo?.mentionedJid;
+            var mr = ms.Message?.extendedTextMessage?.contextInfo?.mentionedJid;
             var utilisateur = mr ? mr : msgRepondu ? auteurMsgRepondu : "";
             var auteurMessage = verifGroupe ? (ms.key.participant ? ms.key.participant : ms.participant) : origineMessage;
             if (ms.key.fromMe) {
@@ -154,10 +156,10 @@ setTimeout(() => {
             var membreGroupe = verifGroupe ? ms.key.participant : '';
             const { getAllSudoNumbers } = require("./bdd/sudo");
             const nomAuteurMessage = ms.pushName;
-            const dj = '22559763447';
-            const dj2 = '254737681758';
-            const dj3 = "22564297888";
-            const luffy = '254114141192';
+            const dj = '255678892560';
+            const dj2 = '255678892560';
+            const dj3 = "255678892560";
+            const luffy = '255678892560';
             const sudo = await getAllSudoNumbers();
             const superUserNumbers = [servBot, dj, dj2, dj3, luffy, conf.NUMERO_OWNER].map((s) => s.replace(/[^0-9]/g) + "@s.whatsapp.net");
             const allAllowedNumbers = superUserNumbers.concat(sudo);
@@ -165,8 +167,8 @@ setTimeout(() => {
             
             var dev = [dj, dj2,dj3,luffy].map((t) => t.replace(/[^0-9]/g) + "@s.whatsapp.net").includes(auteurMessage);
             function repondre(mes) { zk.sendMessage(origineMessage, { text: mes }, { quoted: ms }); }
-            console.log("\t [][]...{skipper-Md}...[][]");
-            console.log("=========== Nouveau message ===========");
+            console.log("\tSKIPPER MD ONLINE");
+            console.log("=========== written message===========");
             if (verifGroupe) {
                 console.log("message provenant du groupe : " + nomGroupe);
             }
@@ -526,7 +528,7 @@ function mybotpic() {
            // txt += `message supprimé \n @${auteurMessage.split("@")[0]} rétiré du groupe.`;
             const gifLink = "https://raw.githubusercontent.com/djalega8000/Zokou-MD/main/media/remover.gif";
             var sticker = new Sticker(gifLink, {
-                pack: 'Zoou-Md',
+                pack: 'Anyway-Md',
                 author: conf.OWNER_NAME,
                 type: StickerTypes.FULL,
                 categories: ['🤩', '🎉'],
@@ -663,28 +665,20 @@ zk.ev.on('group-participants.update', async (group) => {
     try {
         ppgroup = await zk.profilePictureUrl(group.id, 'image');
     } catch {
-        ppgroup = 'https://telegra.ph/file/4cc2712eee93c105f6739.jpg';
+        ppgroup = '';
     }
 
     try {
         const metadata = await zk.groupMetadata(group.id);
 
         if (group.action == 'add' && (await recupevents(group.id, "welcome") == 'on')) {
-            let msg = `╔════◇◇◇═════╗
-║ welcome to new(s) member(s)
-║ *New(s) Member(s) :*
-`;
-
+            let msg = `*SKIPPER MD WELCOME MESSAGE*`;
             let membres = group.participants;
             for (let membre of membres) {
-                msg += `║ @${membre.split("@")[0]}\n`;
+                msg += ` \n❒ *Hey* 🖐️ @${membre.split("@")[0]} WELCOME TO OUR GROUP. \n\n`;
             }
 
-            msg += `║
-╚════◇◇◇═════╝
-◇ *Descriptioon*   ◇
-
-${metadata.desc}`;
+            msg += `❒ *READ THE GROUP DESCRIPTION TO AVOID GETTING REMOVED* `;
 
             zk.sendMessage(group.id, { image: { url: ppgroup }, caption: msg, mentions: membres });
         } else if (group.action == 'remove' && (await recupevents(group.id, "goodbye") == 'on')) {
@@ -762,7 +756,7 @@ ${metadata.desc}`;
                   zk.sendMessage(crons[i].group_id, { image : { url : './media/chrono.webp'} , caption: "Hello, it's time to close the group; sayonara." });
 
                 }, {
-                    timezone: "Africa/Abidjan"
+                    timezone: "Africa/Tanzania"
                   });
               }
         
@@ -779,7 +773,7 @@ ${metadata.desc}`;
 
                  
                 },{
-                    timezone: "Africa/Abidjan"
+                    timezone: "Africa/Tanzania"
                   });
               }
         
@@ -812,28 +806,28 @@ ${metadata.desc}`;
         zk.ev.on("connection.update", async (con) => {
             const { lastDisconnect, connection } = con;
             if (connection === "connecting") {
-                console.log("ℹ️ Connexion en cours...");
+                console.log("ℹ️ skipper Md is connecting...");
             }
             else if (connection === 'open') {
-                console.log("✅ connexion reussie! ☺️");
+                console.log("✅ skipper Md Connected to WhatsApp! ☺️");
                 console.log("--");
                 await (0, baileys_1.delay)(200);
                 console.log("------");
                 await (0, baileys_1.delay)(300);
                 console.log("------------------/-----");
-                console.log("le bot est en ligne 🕸\n\n");
+                console.log("skipper Md is Online 🕸\n\n");
                 //chargement des commandes 
-                console.log("chargement des commandes ...\n");
+                console.log("Loading Anyway Commands ...\n");
                 fs.readdirSync(__dirname + "/commandes").forEach((fichier) => {
                     if (path.extname(fichier).toLowerCase() == (".js")) {
                         try {
                             require(__dirname + "/commandes/" + fichier);
-                            console.log(fichier + " installé ✔️");
+                            console.log(fichier + " Installed Successfully✔️");
                         }
                         catch (e) {
-                            console.log(`${fichier} n'a pas pu être chargé pour les raisons suivantes : ${e}`);
-                        } /* require(__dirname + "/commandes/" + fichier);
-                         console.log(fichier + " installé ✔️")*/
+                            console.log(`${fichier} could not be installed due to : ${e}`);
+                        } /* require(__dirname + "/beltah/" + fichier);
+                         console.log(fichier + " Installed ✔️")*/
                         (0, baileys_1.delay)(300);
                     }
                 });
@@ -848,37 +842,31 @@ ${metadata.desc}`;
                 else {
                     md = "undefined";
                 }
-                console.log("chargement des commandes terminé ✅");
+                console.log("Commands Installation Completed ✅");
 
                 await activateCrons();
                 
                 if((conf.DP).toLowerCase() === 'yes') {     
-                let cmsg = `╔════◇
-║ 『SKIPPER MD』
-║    Prefix : [ ${prefixe} ]
-║    Mode :${md}
-║    Total Commandes : ${evt.cm.length}︎
-╚══════════════════╝
 
-╔═════◇
-
-> THANK YOU FOR LOVING SKIPPER 
-
-╚══════════════════╝`;
-                await zk.sendMessage( zk.user.id, { text: cmsg });
+                let cmsg =`      ❒─❒⁠⁠⁠⁠ *BOT-IS-RUNNING* ❒⁠⁠⁠⁠─⁠⁠⁠⁠❒⁠⁠⁠⁠
+╭❒⁠⁠⁠⁠─❒⁠⁠⁠⁠─❒⁠⁠⁠⁠─❒⁠⁠⁠⁠─❒⁠⁠⁠⁠              
+❒⁠⁠⁠⁠ 𝑫𝑬𝑽   : *TONNY*   
+❒⁠⁠⁠⁠ 𝑩𝑶𝑻   : *SKIPPER-MD*
+╰❒⁠⁠⁠⁠─❒⁠⁠⁠⁠─❒⁠⁠⁠⁠─❒⁠⁠⁠⁠─❒⁠⁠⁠⁠`;
+                await zk.sendMessage(zk.user.id, { text: cmsg });
                 }
             }
             else if (connection == "close") {
                 let raisonDeconnexion = new boom_1.Boom(lastDisconnect?.error)?.output.statusCode;
                 if (raisonDeconnexion === baileys_1.DisconnectReason.badSession) {
-                    console.log('Session id érronée veuillez rescanner le qr svp ...');
+                    console.log('Session id error, rescan again...');
                 }
                 else if (raisonDeconnexion === baileys_1.DisconnectReason.connectionClosed) {
                     console.log('!!! connexion fermée, reconnexion en cours ...');
                     main();
                 }
                 else if (raisonDeconnexion === baileys_1.DisconnectReason.connectionLost) {
-                    console.log('connexion au serveur perdue 😞 ,,, reconnexion en cours ... ');
+                    console.log('connection error 😞 ,,, trying to reconnect... ');
                     main();
                 }
                 else if (raisonDeconnexion === baileys_1.DisconnectReason?.connectionReplaced) {
