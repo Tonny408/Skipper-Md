@@ -63,12 +63,12 @@
     "OWNER_NAME": {
       "desc": "Your Name",
       "required": false,
-      "value": "skipper254🇰🇪"
+      "value": "Tonny408"
     },
     "NUMERO_OWNER": {
       "desc": "Your number , dont put '+' and put you area code(exemple of togo '228')",
       "required": false,
-      "value": "254111385747"
+      "value": "254798780465"
     },
     "WARN_COUNT": {
       "desc": "this is the limit of warn for warning commandes",
