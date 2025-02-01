@@ -7,7 +7,7 @@
     "baileys",
     "whatsapp"
   ],
-  "logo": "https://telegra.ph/file/4fe5da5003e390a58de5f.jpg",
+  "logo": "https://files.catbox.moe/dy41tw.jpg",
   "repository": "https://github.com/Tonny408/Skipper-Md",
   "succes_url": "/",
   "stack": "container",
@@ -39,7 +39,7 @@
     },
     "BOT_MENU_LINKS": {
       "description": "add one or many link for your bot menu  ; eg : url1,url2,url3.....",
-      "value": "https://telegra.ph/file/4fe5da5003e390a58de5f.jpg",
+      "value": "https://files.catbox.moe/dy41tw.jpg",
       "required": false
     },
     "PUBLIC_MODE": {
