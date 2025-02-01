@@ -1,9 +1,5 @@
-
-
-
-
 {
-  "name": "Skipper-md",
+  "name": "Bmw-md",
   "version": "2.0.0",
   "description": "",
   "main": "index.js",
@@ -17,12 +13,12 @@
   "keywords": [
     "bot",
     "Baileys",
-    "Popkid-md",
+    "Bmw-md",
     "whatsapp",
     "whatsapp-bot",
-    "popkid-md-boy"
+    "bmw-md-boy"
   ],
-  "author": "Popkid",
+  "author": "Tosh205",
 "license": "ISC",
   "dependencies": {
     "@adiwajshing/keyed-db": "^0.2.4",
