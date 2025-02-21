@@ -49,4 +49,4 @@ Enjoy the diverse features of the Skipper-Md to enhance your conversations and m
 ## ACKNOWLEDGEMENT TO:
 
 - [**MGTOPHAZ ZENON-AI**](https://wa.me/254705243111)
-- [**KISH𓅃 Kish-MD**](https://wa.me/254745936840
+- [**KISH𓅃 Kish-MD**](https://wa.me/254745936840)
